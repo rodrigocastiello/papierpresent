@@ -49,7 +49,7 @@
     >
       <Option
         id="00030"
-        icon="bold/interface-home-3"
+        icon={'{{  "/icon:line/interface-setting-menu-1"  }}'}
         iconPosition="left"
         itemType="page"
         key="fbda2"
@@ -79,7 +79,7 @@
       />
       <Option
         id="00031"
-        icon="bold/interface-user-multiple"
+        icon={'{{  "/icon:line/shipping-box-2"  }}'}
         iconPosition="left"
         itemType="page"
         label="Inventory"
@@ -87,7 +87,7 @@
       />
       <Option
         id="00032"
-        icon="bold/interface-setting-cog"
+        icon={'{{  "/icon:line/interface-arrows-expand-3"  }}'}
         iconPosition="left"
         itemType="page"
         label="Adjustments"
@@ -96,9 +96,10 @@
         id="e46f2"
         disabled={false}
         hidden={false}
+        icon={'{{  "/icon:line/interface-file-text"  }}'}
         iconPosition="left"
         itemType="app"
-        label="Artwork"
+        label="Artwork jobs"
       />
       <Event
         id="mockEventHandlerId1"
