@@ -10,6 +10,12 @@
   style={{ background: "canvas", headerBackground: "surfacePrimary" }}
 >
   <Header>
+    <Text
+      id="containerTitle1"
+      style={{ map: { color: "primary" } }}
+      value="#### Inventory"
+      verticalAlign="center"
+    />
     <Container
       id="group8"
       _gap="0px"
@@ -50,12 +56,6 @@
         </Button>
       </View>
     </Container>
-    <Text
-      id="containerTitle1"
-      style={{ map: { color: "primary" } }}
-      value="#### Inventory"
-      verticalAlign="center"
-    />
     <Container
       id="group7"
       _align="end"
