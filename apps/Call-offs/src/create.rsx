@@ -63,6 +63,20 @@
       resourceName="JavascriptQuery"
       showSuccessToaster={false}
     />
+    <JavascriptQuery
+      id="validate_call_off"
+      query={include("../lib/validate_call_off.js", "string")}
+      resourceName="JavascriptQuery"
+      showFailureToaster={false}
+      showSuccessToaster={false}
+    />
+    <JavascriptQuery
+      id="create_call_off"
+      query={include("../lib/create_call_off.js", "string")}
+      resourceName="JavascriptQuery"
+      showFailureToaster={false}
+      showSuccessToaster={false}
+    />
   </Folder>
   <Folder id="_requests">
     <SqlQueryUnified
@@ -73,6 +87,20 @@
       resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
       runWhenModelUpdates={false}
       showFailureToaster={false}
+      showSuccessToaster={false}
+      showUpdateSetValueDynamicallyToggle={false}
+      updateSetValueDynamically={true}
+      warningCodes={[]}
+    />
+    <SqlQueryUnified
+      id="_CREATE_call_off"
+      _additionalScope={["payload"]}
+      isMultiplayerEdited={false}
+      notificationDuration={4.5}
+      query={include("../lib/_CREATE_call_off.sql", "string")}
+      resourceDisplayName="retool_db"
+      resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
+      runWhenModelUpdates={false}
       showSuccessToaster={false}
       showUpdateSetValueDynamicallyToggle={false}
       updateSetValueDynamically={true}
@@ -90,13 +118,6 @@
       showSuccessToaster={false}
     />
   </Folder>
-  <JavascriptQuery
-    id="query1"
-    notificationDuration={4.5}
-    query={include("../lib/query1.js", "string")}
-    resourceName="JavascriptQuery"
-    showSuccessToaster={false}
-  />
   <Frame
     id="$main2"
     enableFullBleed={true}
@@ -181,13 +202,12 @@
       </Header>
       <View id="00030" viewKey="View 1">
         <Form
-          id="form1"
+          id="calloffForm"
           footerPadding="4px 12px"
           headerPadding="4px 12px"
           margin="0"
           padding="12px"
           requireValidation={true}
-          resetAfterSubmit={true}
           showBody={true}
           showBorder={false}
           showFooter={true}
@@ -237,6 +257,7 @@
                     />
                     <Button
                       id="button4"
+                      disabled="{{ !customerSelect?.value }}"
                       heightType="fill"
                       iconBefore="line/interface-add-1"
                       text="Add line"
@@ -317,7 +338,7 @@
                     }}
                     placeholder="Select option"
                     position="center"
-                    size={210.6875}
+                    size={321.6875}
                     summaryAggregationMode="none"
                   />
                   <Column
@@ -349,7 +370,7 @@
                     label="Requested"
                     placeholder="Enter value"
                     position="center"
-                    size={86.875}
+                    size={85.875}
                     summaryAggregationMode="none"
                   />
                   <Column
@@ -362,7 +383,7 @@
                     placeholder="Enter value"
                     position="center"
                     referenceId="availableStock"
-                    size={116}
+                    size={110.4375}
                     summaryAggregationMode="none"
                     valueOverride="{{ currentSourceRow.product_id ? (formatDataAsArray(_GET_products.data).find(p => p.product_id ===
   currentSourceRow.product_id) || {}).available ?? '—' : '—' }}"
@@ -375,7 +396,11 @@
                       params={{
                         map: {
                           options: {
-                            map: { additionalScope: { map: { rowId: "" } } },
+                            map: {
+                              additionalScope: {
+                                map: { rowId: "{{ currentRow?.id }}" },
+                              },
+                            },
                           },
                         },
                       }}
@@ -410,21 +435,6 @@
                 </Table>
               </View>
             </Container>
-            <Text
-              id="text2"
-              value="{{  JSON.stringify(linesTable.changesetArray) }}"
-              verticalAlign="center"
-            />
-            <Text
-              id="text3"
-              value="{{ JSON.stringify(_lines.value) }}"
-              verticalAlign="center"
-            />
-            <Text
-              id="text4"
-              value="{{ JSON.stringify(get_lines.value) }}"
-              verticalAlign="center"
-            />
           </Body>
           <Footer>
             <Container
@@ -446,12 +456,22 @@
                   heightType="auto"
                   iconBefore="line/computer-storage-floppy-disk"
                   submit={true}
-                  submitTargetId="form1"
+                  submitTargetId="calloffForm"
                   text="Save call-off"
                 />
               </View>
             </Container>
           </Footer>
+          <Event
+            id="6fbc84f0"
+            event="submit"
+            method="trigger"
+            params={{}}
+            pluginId="create_call_off"
+            type="datasource"
+            waitMs="0"
+            waitType="debounce"
+          />
         </Form>
       </View>
     </Container>

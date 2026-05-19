@@ -20,7 +20,9 @@
       captionByIndex="{{ item.sales_contact_email }}"
       colorByIndex=""
       data="{{ get_customers.value }}"
+      disabled="{{ (_lines.value || []).some(l => l.product_id != null) }}"
       emptyMessage="No options"
+      formDataKey="customer_id"
       label="Customer"
       labelPosition="top"
       labels="{{ item.name }}"
@@ -31,9 +33,10 @@
       values="{{ item.id }}"
     />
     <Date
-      id="date1"
+      id="requestedDate"
       dateFormat="MMM d, yyyy"
       datePlaceholder="{{ self.dateFormat.toUpperCase() }}"
+      formDataKey="requested_date"
       iconBefore="bold/interface-calendar"
       label="Requested date"
       labelPosition="top"
@@ -41,16 +44,17 @@
       value="{{ new Date() }}"
     />
     <Date
-      id="date2"
+      id="customerDeadlineDate"
       dateFormat="MMM d, yyyy"
       datePlaceholder="{{ self.dateFormat.toUpperCase() }}"
+      formDataKey="customer_deadline"
       iconBefore="bold/interface-calendar"
       label="Customer deadline"
       labelPosition="top"
     />
     <Text id="text1" value="**Delivery mode**" verticalAlign="center" />
     <Tabs
-      id="tabs1"
+      id="deliveryTab"
       alignment="justify"
       itemMode="static"
       style={{}}
@@ -60,18 +64,21 @@
         id="00030"
         icon="line/shipping-transfer-truck"
         iconPosition="left"
-        value="Warehouse dispatch"
+        label="Warehouse dispatch"
+        value="warehouse_dispatch"
       />
       <Option
         id="00031"
         icon="line/travel-map-navigation-arrow-north"
         iconPosition="left"
-        value="Drop shipping"
+        label="Drop shipping"
+        value="drop_shipping"
       />
     </Tabs>
     <TextArea
-      id="textArea1"
+      id="notesTextArea"
       autoResize={true}
+      formDataKey="notes"
       label="Notes"
       labelPosition="top"
       minLines={2}
