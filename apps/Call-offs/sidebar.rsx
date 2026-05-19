@@ -42,7 +42,7 @@
     >
       <Option
         id="00030"
-        icon="line/interface-setting-menu-1"
+        icon={'{{  "/icon:line/interface-setting-menu-1"  }}'}
         iconPosition="left"
         itemType="page"
         key="dce1a"
@@ -72,14 +72,14 @@
       />
       <Option
         id="00031"
-        icon="line/shipping-box-2"
+        icon={'{{  "/icon:line/shipping-box-2"  }}'}
         iconPosition="left"
         itemType="page"
         label="Inventory"
       />
       <Option
         id="00032"
-        icon="line/interface-arrows-expand-3"
+        icon={'{{  "/icon:line/interface-arrows-expand-3"  }}'}
         iconPosition="left"
         itemType="page"
         label="Adjustments"
@@ -88,7 +88,7 @@
         id="b2970"
         disabled={false}
         hidden={false}
-        icon="line/interface-file-text"
+        icon={'{{  "/icon:line/interface-file-text"  }}'}
         iconPosition="left"
         itemType="app"
         label="Artwork jobs"
