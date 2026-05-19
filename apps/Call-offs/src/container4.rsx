@@ -72,7 +72,7 @@
         icon="line/travel-map-navigation-arrow-north"
         iconPosition="left"
         label="Drop shipping"
-        value="drop_shipping"
+        value="drop_ship"
       />
     </Tabs>
     <TextArea

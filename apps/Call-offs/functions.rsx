@@ -35,6 +35,16 @@
       showSuccessToaster={false}
       warningCodes={[]}
     />
+    <SqlQueryUnified
+      id="_GET_call_offs"
+      query={include("./lib/_GET_call_offs.sql", "string")}
+      resourceDisplayName="retool_db"
+      resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
+      runWhenModelUpdates={false}
+      showFailureToaster={false}
+      showSuccessToaster={false}
+      warningCodes={[]}
+    />
   </Folder>
   <Folder id="getters">
     <Function
