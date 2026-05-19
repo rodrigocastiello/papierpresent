@@ -1,1 +1,0 @@
-return {{ formatDataAsArray(_GET_customers.data) }};
