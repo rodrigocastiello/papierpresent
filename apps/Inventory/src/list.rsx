@@ -60,6 +60,10 @@
     id="get_all_customers"
     funcBody={include("../lib/get_all_customers.js", "string")}
   />
+  <Function
+    id="get_rack_tag_options"
+    funcBody={include("../lib/get_rack_tag_options.js", "string")}
+  />
   <Frame
     id="$main"
     enableFullBleed={true}

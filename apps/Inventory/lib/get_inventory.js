@@ -5,15 +5,9 @@ const categoryFilter = {{ inventoryCategoryTabs?.value }};
 const searchRaw      = {{ inventorySearch?.value }};
 const search         = (searchRaw || "").toString().toLowerCase().trim();
 
-const formatRacks = (racks) => {
+const formatRacksAsTags = (racks) => {
   const list = Array.isArray(racks) ? racks : [];
-  if (list.length === 0) return "—";
-  const head = list.slice(0, 3).map(r => {
-    const tag = r.is_full ? "" : " *";
-    return `${r.rack}${tag}`;
-  }).join(" · ");
-  const overflow = list.length > 3 ? `  +${list.length - 3}` : "";
-  return head + overflow;
+  return list.map(r => r.is_full ? r.rack : `${r.rack} *`);
 };
 
 let rows = raw.map(aj => {
@@ -36,7 +30,7 @@ let rows = raw.map(aj => {
 
     size_display:     multi ? `${products.length} sizes`     : (single?.size     || "—"),
     p_number_display: multi ? `${products.length} P-numbers` : (single?.p_number || "—"),
-    racks_display:    multi ? "" : formatRacks(single?.racks || []),
+    racks_tags:       multi ? [] : formatRacksAsTags(single?.racks || []),
 
     products: products.map(p => ({
       product_id:    p.product_id,
@@ -46,7 +40,7 @@ let rows = raw.map(aj => {
       reserved:      p.reserved,
       available:     p.available,
       racks:         p.racks,
-      racks_display: formatRacks(p.racks),
+      racks_tags:    formatRacksAsTags(p.racks),
     })),
   };
 });
