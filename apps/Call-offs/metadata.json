@@ -1,0 +1,21 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c",
+  "appTemplate": {
+    "appThemeId": 193093,
+    "pageCodeFolders": {
+      "object": {
+        "list": {
+          "array": ["setters", "getters"]
+        },
+        "create": {
+          "array": ["_init", "_requests", "_states", "setters", "getters"]
+        }
+      }
+    },
+    "rootScreen": "list",
+    "appThemeName": "PapierPresent",
+    "version": "3.391.0"
+  }
+}
