@@ -4,8 +4,6 @@
   headerPadding="8px 12px"
   isHiddenOnMobile={true}
   padding="8px 12px"
-  showFooter={true}
-  showHeader={true}
   width="large"
 >
   <Header>
@@ -17,22 +15,91 @@
     />
   </Header>
   <Body>
+    <Avatar
+      id="avatar2"
+      fallback="{{ current_user.fullName }}"
+      imageSize={32}
+      label="Papier Present"
+      labelCaption="Warehouse console"
+      src="{{ _GET_logo.data?.url }}"
+      style={{ map: { borderRadius: "0%" } }}
+    />
     <Navigation
       id="navigation1"
-      data="{{ retoolContext.pages }}"
-      highlightByIndex="{{ retoolContext.currentPage === item.id }}"
-      labels="{{ item.title || item.id }}"
+      appTargetByIndex=""
+      captionByIndex=""
+      data=""
+      disabledByIndex=""
+      hiddenByIndex=""
+      highlightByIndex=""
+      iconByIndex=""
+      iconPositionByIndex=""
+      itemMode="static"
+      itemTypeByIndex=""
+      keyByIndex=""
+      labels=""
       orientation="vertical"
+      parentKeyByIndex=""
+      persistUrlParamsByIndex=""
+      screenTargetByIndex=""
+      screenTargetIdByIndex=""
       src={null}
       srcType={null}
+      tooltipByIndex=""
     >
-      <Option id="00030" icon="bold/interface-home-3" label="Home" />
+      <Option
+        id="00030"
+        icon="bold/interface-home-3"
+        iconPosition="left"
+        itemType="page"
+        key="fbda2"
+        label="Call-offs"
+      />
+      <Option
+        id="013d1"
+        appTarget="a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c"
+        disabled={false}
+        hidden={false}
+        iconPosition="left"
+        itemType="app"
+        label="List"
+        parentKey="fbda2"
+        screenTargetId="list"
+      />
+      <Option
+        id="1febe"
+        appTarget="a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c"
+        disabled={false}
+        hidden={false}
+        iconPosition="left"
+        itemType="app"
+        label="Create"
+        parentKey="fbda2"
+        screenTargetId="create"
+      />
       <Option
         id="00031"
         icon="bold/interface-user-multiple"
-        label="Customers"
+        iconPosition="left"
+        itemType="page"
+        label="Inventory"
+        screenTargetId="list"
       />
-      <Option id="00032" icon="bold/interface-setting-cog" label="Settings" />
+      <Option
+        id="00032"
+        icon="bold/interface-setting-cog"
+        iconPosition="left"
+        itemType="page"
+        label="Adjustments"
+      />
+      <Option
+        id="e46f2"
+        disabled={false}
+        hidden={false}
+        iconPosition="left"
+        itemType="app"
+        label="Artwork"
+      />
       <Event
         id="mockEventHandlerId1"
         event="click"
