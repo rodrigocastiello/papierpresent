@@ -101,6 +101,7 @@
       resourceDisplayName="retool_db"
       resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
       runWhenModelUpdates={false}
+      showFailureToaster={false}
       showSuccessToaster={false}
       showUpdateSetValueDynamicallyToggle={false}
       updateSetValueDynamically={true}

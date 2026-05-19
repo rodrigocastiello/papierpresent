@@ -205,7 +205,7 @@
         }}
         placeholder="Enter value"
         position="center"
-        size={140}
+        size={201}
         summaryAggregationMode="none"
       />
       <Column

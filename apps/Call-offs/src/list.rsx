@@ -9,6 +9,16 @@
   urlSlug=""
   uuid="09d2b762-ae3b-47a7-862b-e929444d6618"
 >
+  <Folder id="getters">
+    <Function
+      id="get_all_customers"
+      funcBody={include("../lib/get_all_customers.js", "string")}
+    />
+    <Function
+      id="get_call_offs"
+      funcBody={include("../lib/get_call_offs.js", "string")}
+    />
+  </Folder>
   <Folder id="setters">
     <JavascriptQuery
       id="go_to_create_page"
@@ -18,14 +28,6 @@
       showSuccessToaster={false}
     />
   </Folder>
-  <Function
-    id="get_call_offs"
-    funcBody={include("../lib/get_call_offs.js", "string")}
-  />
-  <Function
-    id="get_all_customers"
-    funcBody={include("../lib/get_all_customers.js", "string")}
-  />
   <Frame
     id="$main"
     enableFullBleed={true}
