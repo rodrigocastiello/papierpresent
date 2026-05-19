@@ -1,24 +1,24 @@
 {
   "button1": {
     "type": "stack",
-    "container": "group1",
+    "container": "group8",
     "subcontainer": "00030",
-    "col": 10,
-    "height": 1,
-    "width": 2,
+    "col": 6,
+    "height": 0.8,
+    "width": 6,
     "stackPosition": {
       "object": {
-        "ordinal": 2,
+        "ordinal": 1,
         "widthType": "auto",
-        "width": 156,
-        "height": 40
+        "width": 78,
+        "height": 48
       }
     }
   },
   "container1": {
     "row": 5.6,
     "col": 2,
-    "height": 19,
+    "height": 92.4,
     "width": 6,
     "stackPosition": {
       "object": {
@@ -30,23 +30,34 @@
     }
   },
   "containerTitle1": {
-    "type": "stack",
-    "container": "group1",
+    "container": "container1",
+    "rowGroup": "header",
     "subcontainer": "00030",
-    "height": 0.6,
+    "row": 0,
+    "height": 0.6
+  },
+  "group5": {
+    "type": "stack",
+    "container": "group7",
+    "subcontainer": "00030",
+    "row": 0,
+    "col": 7,
+    "height": 3.8,
     "width": 5,
     "stackPosition": {
       "object": {
-        "ordinal": 0,
-        "widthType": "fill",
+        "ordinal": 2,
+        "widthType": "fixed",
         "width": 390,
-        "height": 32
+        "height": 80
       }
     }
   },
-  "group1": {
+  "group7": {
     "container": "container1",
     "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 3.8,
     "height": 3.8,
     "width": 12,
     "stackPosition": {
@@ -58,35 +69,13 @@
       }
     }
   },
-  "invExportButton": {
-    "type": "stack",
-    "container": "group1",
-    "subcontainer": "00030",
-    "col": 8,
-    "height": 1,
-    "width": 2,
-    "stackPosition": {
-      "object": {
-        "ordinal": 1,
-        "widthType": "auto",
-        "width": 156,
-        "height": 40
-      }
-    }
-  },
-  "inventoryCategoryTabs": {
+  "group8": {
     "container": "container1",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 4,
-    "col": 3,
-    "height": 1
-  },
-  "inventoryTable": {
-    "container": "container1",
-    "subcontainer": "00030",
-    "height": 8,
-    "width": 8,
+    "col": 10,
+    "height": 3.8,
+    "width": 2,
     "stackPosition": {
       "object": {
         "ordinal": 0,
@@ -96,27 +85,146 @@
       }
     }
   },
-  "selectCustomer": {
-    "container": "container1",
-    "rowGroup": "header",
+  "invExportButton": {
+    "type": "stack",
+    "container": "group8",
     "subcontainer": "00030",
-    "row": 4,
-    "height": 0.2
+    "height": 0.8,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "auto",
+        "width": 78,
+        "height": 48
+      }
+    }
   },
-  "spacer1": {
+  "inventoryCategoryTabs": {
     "container": "container1",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 3.8,
+    "row": 7.6,
+    "height": 0.8,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "inventoryCustomerSelect": {
+    "type": "stack",
+    "container": "group7",
+    "subcontainer": "00030",
+    "row": 2.2,
     "height": 0.2,
+    "width": 4,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 300,
+        "height": 40
+      }
+    }
+  },
+  "inventorySearch": {
+    "type": "stack",
+    "container": "group7",
+    "subcontainer": "00030",
+    "row": 4.2,
+    "col": 7,
+    "height": 0.2,
+    "width": 5,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fill",
+        "width": 300,
+        "height": 40
+      }
+    }
+  },
+  "inventoryTable": {
+    "container": "container1",
+    "subcontainer": "00030",
+    "height": 11.8,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "statistic1": {
+    "type": "stack",
+    "container": "group5",
+    "subcontainer": "00030",
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "auto",
+        "width": 156,
+        "height": 48
+      }
+    }
+  },
+  "statistic2": {
+    "type": "stack",
+    "container": "group5",
+    "subcontainer": "00030",
+    "col": 3,
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "auto",
+        "width": 156,
+        "height": 48
+      }
+    }
+  },
+  "statistic3": {
+    "type": "stack",
+    "container": "group5",
+    "subcontainer": "00030",
+    "col": 6,
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 2,
+        "widthType": "auto",
+        "width": 156,
+        "height": 48
+      }
+    }
+  },
+  "statistic4": {
+    "type": "stack",
+    "container": "group5",
+    "subcontainer": "00030",
+    "col": 9,
+    "height": 0.8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 3,
+        "widthType": "auto",
+        "width": 156,
+        "height": 48
+      }
+    }
+  },
+  "table1": {
+    "container": "inventoryTable",
+    "height": 1,
     "width": 12
-  },
-  "textInput1": {
-    "container": "container1",
-    "rowGroup": "header",
-    "subcontainer": "00030",
-    "row": 4.8,
-    "height": 0.2,
-    "width": 4
   }
 }
