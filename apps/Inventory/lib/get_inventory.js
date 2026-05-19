@@ -1,5 +1,6 @@
 const raw = formatDataAsArray({{ _GET_inventory.data }}) || [];
 
+const customerId     = {{ inventoryCustomerSelect?.value }};
 const categoryFilter = {{ inventoryCategoryTabs?.value }};
 const searchRaw      = {{ inventorySearch?.value }};
 const search         = (searchRaw || "").toString().toLowerCase().trim();
@@ -15,43 +16,56 @@ const formatRacks = (racks) => {
   return head + overflow;
 };
 
-const rows = [];
-for (const aj of raw) {
+let rows = raw.map(aj => {
   const products = Array.isArray(aj.products) ? aj.products : [];
-  products.forEach((p, idx) => {
-    rows.push({
-      id: `${aj.artwork_job_id}-${p.product_id}`,
-      artwork_job_id:   aj.artwork_job_id,
-      artwork_job_code: aj.artwork_job_code,
-      artwork_job_name: aj.artwork_job_name,
-      category:         aj.category,
-      sizes_count:       products.length,
-      is_first_in_group: idx === 0,
-      product_id:       p.product_id,
-      p_number:         p.p_number,
-      size:             p.size, 
-      units_per_carton: p.units_per_carton,
-      units_per_pallet: p.units_per_pallet,
-      on_hand:   p.on_hand,
-      reserved:  p.reserved,
-      available: p.available,
+  const single   = products.length === 1 ? products[0] : null;
+  const multi    = products.length > 1;
+
+  return {
+    id:               aj.artwork_job_id,
+    customer_id:      aj.customer_id,
+    artwork_job_id:   aj.artwork_job_id,
+    artwork_job_code: aj.artwork_job_code,
+    artwork_job_name: aj.artwork_job_name,
+    category:         aj.category,
+    product_count:    products.length,
+
+    on_hand:   aj.on_hand,
+    reserved:  aj.reserved,
+    available: aj.available,
+
+    size_display:     multi ? `${products.length} sizes`     : (single?.size     || "—"),
+    p_number_display: multi ? `${products.length} P-numbers` : (single?.p_number || "—"),
+    racks_display:    multi ? "" : formatRacks(single?.racks || []),
+
+    products: products.map(p => ({
+      product_id:    p.product_id,
+      size:          p.size,
+      p_number:      p.p_number,
+      on_hand:       p.on_hand,
+      reserved:      p.reserved,
+      available:     p.available,
       racks:         p.racks,
       racks_display: formatRacks(p.racks),
-    });
-  });
-}
+    })),
+  };
+});
 
-let filtered = rows;
-if (categoryFilter && categoryFilter !== "all") {
-  filtered = filtered.filter(r => r.category === categoryFilter);
+if (customerId) {
+  rows = rows.filter(r => r.customer_id === customerId);
 }
-if (search) { 
-  filtered = filtered.filter(r =>
-    (r.p_number || "").toLowerCase().includes(search) ||
+if (categoryFilter && categoryFilter !== "all") {
+  rows = rows.filter(r => r.category === categoryFilter);
+}
+if (search) {
+  rows = rows.filter(r =>
     (r.artwork_job_code || "").toLowerCase().includes(search) ||
     (r.artwork_job_name || "").toLowerCase().includes(search) ||
-    (r.size || "").toLowerCase().includes(search)
+    (r.products || []).some(p =>
+      (p.p_number || "").toLowerCase().includes(search) ||
+      (p.size     || "").toLowerCase().includes(search)
+    )
   );
-} 
+}
 
-return filtered;
+return rows;

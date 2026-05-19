@@ -11,6 +11,7 @@
 >
   <SqlQueryUnified
     id="_GET_inventory"
+    isMultiplayerEdited={false}
     notificationDuration={4.5}
     query={include("../lib/_GET_inventory.sql", "string")}
     resourceDisplayName="retool_db"

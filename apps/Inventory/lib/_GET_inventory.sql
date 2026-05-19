@@ -1,7 +1,7 @@
 WITH placements AS (
   SELECT
     ip.inventory_item_id,
-    json_agg( 
+    json_agg(
       json_build_object(
         'location_id',      wl.id,
         'rack',             wl.code,
@@ -38,14 +38,14 @@ product_rows AS (
   FROM inventory_items ii
   JOIN products      p  ON p.id = ii.product_id
   LEFT JOIN placements pl ON pl.inventory_item_id = ii.id
-  WHERE ii.customer_id = {{ inventoryCustomerSelect.value || 0 }}
-) 
+)
 
 SELECT
-  aj.id        AS artwork_job_id,
-  aj.code      AS artwork_job_code,
-  aj.name      AS artwork_job_name,
-  aj.category  AS category,
+  aj.customer_id             AS customer_id,
+  aj.id                      AS artwork_job_id,
+  aj.code                    AS artwork_job_code,
+  aj.name                    AS artwork_job_name,
+  aj.category                AS category,
   count(pr.product_id)::int  AS product_count,
   SUM(pr.on_hand)::int       AS on_hand,
   SUM(pr.reserved)::int      AS reserved,
@@ -66,5 +66,5 @@ SELECT
   ) AS products
 FROM artwork_jobs aj
 JOIN product_rows pr ON pr.artwork_job_id = aj.id
-GROUP BY aj.id, aj.code, aj.name, aj.category
+GROUP BY aj.customer_id, aj.id, aj.code, aj.name, aj.category
 ORDER BY aj.code;
