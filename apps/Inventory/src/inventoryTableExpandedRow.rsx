@@ -10,7 +10,6 @@
     heightType="auto"
     hidden="{{ currentSourceRow.product_count === 1 }}"
     margin="0"
-    primaryKeyColumnId="84fab"
     rowHeight="medium"
     toolbarPosition="bottom"
   >
@@ -117,19 +116,6 @@
       summaryAggregationMode="none"
     />
     <Column
-      id="f89de"
-      alignment="left"
-      editableOptions={{ spellCheck: false }}
-      format="string"
-      groupAggregationMode="none"
-      key="racks_display"
-      label="Racks display"
-      placeholder="Enter value"
-      position="center"
-      size={100}
-      summaryAggregationMode="none"
-    />
-    <Column
       id="85a7a"
       alignment="left"
       editableOptions={{ spellCheck: false }}
@@ -139,6 +125,29 @@
       position="left"
       referenceId="x"
       size={163}
+      summaryAggregationMode="none"
+    />
+    <Column
+      id="acd41"
+      alignment="left"
+      cellTooltipMode="overflow"
+      editableOptions={{ allowCustomValue: true }}
+      format="tags"
+      formatOptions={{ automaticColors: true }}
+      groupAggregationMode="none"
+      key="racks_tags"
+      label="Racks tags"
+      optionList={{
+        manualData: [],
+        mode: "mapped",
+        mappedData: "{{ get_rack_tag_options.value }}",
+        valueByIndex: "{{ item.value }}",
+        labelByIndex: "{{ item.label }}",
+        colorByIndex: "{{ item.color }}",
+      }}
+      placeholder="Select options"
+      position="center"
+      size={100}
       summaryAggregationMode="none"
     />
   </Table>

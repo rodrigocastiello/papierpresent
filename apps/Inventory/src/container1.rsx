@@ -1,5 +1,6 @@
 <Container
   id="container1"
+  enableFullBleed={true}
   footerPadding="4px 12px"
   headerPadding="4px 12px"
   heightType="fixed"
@@ -306,9 +307,30 @@
         label="Available"
         placeholder="Enter value"
         position="center"
-        size={87.28125}
+        size={100.28125}
         summaryAggregationMode="none"
         valueOverride={'{{ item + "u" }}'}
+      />
+      <Column
+        id="0340f"
+        alignment="left"
+        cellTooltipMode="overflow"
+        format="tags"
+        formatOptions={{ automaticColors: true }}
+        groupAggregationMode="none"
+        key="racks_tags"
+        label="Racks"
+        optionList={{
+          mode: "mapped",
+          mappedData: "{{ get_rack_tag_options.value }}",
+          valueByIndex: "{{ item.value }}",
+          labelByIndex: "{{ item.label }}",
+          colorByIndex: "{{ item.color }}",
+        }}
+        placeholder="Select options"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
       />
       <Column
         id="04c57"
@@ -338,21 +360,6 @@
         placeholder="Select option"
         position="center"
         size={138.34375}
-        summaryAggregationMode="none"
-        valueOverride="{{ _.startCase(item) }}"
-      />
-      <Column
-        id="f450b"
-        alignment="left"
-        format="tag"
-        formatOptions={{ automaticColors: true }}
-        groupAggregationMode="none"
-        hidden="false"
-        key="racks_display"
-        label="Racks"
-        placeholder="Select option"
-        position="center"
-        size={93.25}
         summaryAggregationMode="none"
         valueOverride="{{ _.startCase(item) }}"
       />
