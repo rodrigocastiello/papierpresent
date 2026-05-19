@@ -55,6 +55,7 @@
         hidden={false}
         iconPosition="left"
         itemType="app"
+        label="List"
         parentKey="dce1a"
         screenTargetId="list"
       />
@@ -65,6 +66,7 @@
         hidden={false}
         iconPosition="left"
         itemType="app"
+        label="Create"
         parentKey="dce1a"
         screenTargetId="create"
       />
