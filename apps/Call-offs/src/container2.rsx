@@ -27,23 +27,6 @@
       value=""
       values="{{ item.name }}"
     />
-    <Select
-      id="select2"
-      emptyMessage="No options"
-      iconBefore="line/interface-calendar"
-      itemMode="static"
-      label=""
-      labelPosition="top"
-      overlayMaxHeight={375}
-      placeholder="Select an option"
-      showClear={true}
-      showSelectionIndicator={true}
-      textBefore="Requested"
-    >
-      <Option id="00030" label="Last 7 days" value="7" />
-      <Option id="00031" label="Last 30 days" value="30" />
-      <Option id="00032" label="Last 365 days" value="365" />
-    </Select>
     <Multiselect
       id="multiselect1"
       emptyMessage="No options"
@@ -67,6 +50,23 @@
         value="Cancelled"
       />
     </Multiselect>
+    <Select
+      id="select2"
+      emptyMessage="No options"
+      iconBefore="line/interface-calendar"
+      itemMode="static"
+      label=""
+      labelPosition="top"
+      overlayMaxHeight={375}
+      placeholder="Select an option"
+      showClear={true}
+      showSelectionIndicator={true}
+      textBefore="Requested"
+    >
+      <Option id="00030" label="Last 7 days" value="7" />
+      <Option id="00031" label="Last 30 days" value="30" />
+      <Option id="00032" label="Last 365 days" value="365" />
+    </Select>
     <TextInput
       id="textInput1"
       iconBefore="bold/interface-search"
