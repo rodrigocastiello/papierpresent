@@ -1,0 +1,1 @@
+_GET_inventory.trigger();

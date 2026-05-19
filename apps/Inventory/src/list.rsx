@@ -9,6 +9,40 @@
   urlSlug=""
   uuid="692bc470-1f1d-4670-9cb9-67c0489027bf"
 >
+  <SqlQueryUnified
+    id="_GET_inventory"
+    notificationDuration={4.5}
+    query={include("../lib/_GET_inventory.sql", "string")}
+    resourceDisplayName="retool_db"
+    resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
+    runWhenModelUpdates={false}
+    showFailureToaster={false}
+    showSuccessToaster={false}
+    showUpdateSetValueDynamicallyToggle={false}
+    updateSetValueDynamically={true}
+    warningCodes={[]}
+  />
+  <JavascriptQuery
+    id="_init_inventory"
+    notificationDuration={4.5}
+    query={include("../lib/_init_inventory.js", "string")}
+    resourceName="JavascriptQuery"
+    runWhenPageLoads={true}
+    showFailureToaster={false}
+    showSuccessToaster={false}
+  />
+  <Function
+    id="get_inventory"
+    funcBody={include("../lib/get_inventory.js", "string")}
+  />
+  <Function
+    id="get_inventory_summary"
+    funcBody={include("../lib/get_inventory_summary.js", "string")}
+  />
+  <Function
+    id="get_inventory_categories"
+    funcBody={include("../lib/get_inventory_categories.js", "string")}
+  />
   <Frame
     id="$main"
     enableFullBleed={true}
@@ -29,16 +63,55 @@
       showHeader={true}
     >
       <Header>
-        <Text
-          id="containerTitle1"
-          style={{ map: { color: "primary" } }}
-          value="#### Inventory"
-          verticalAlign="center"
-        />
+        <Container
+          id="group1"
+          _align="center"
+          _gap="0px"
+          _type="stack"
+          footerPadding="4px 12px"
+          headerPadding="4px 12px"
+          margin="0"
+          padding="0"
+          showBody={true}
+          showBorder={false}
+          style={{ map: { background: "rgba(255, 255, 255, 0)" } }}
+        >
+          <View id="00030" viewKey="View 1">
+            <Text
+              id="containerTitle1"
+              style={{ map: { color: "primary" } }}
+              value="#### Inventory"
+              verticalAlign="center"
+            />
+            <Button
+              id="invExportButton"
+              iconBefore="line/interface-download-button-2"
+              style={{}}
+              styleVariant="outline"
+              text="Export"
+            />
+            <Button
+              id="button1"
+              iconBefore="line/interface-arrows-synchronize"
+              text="Refresh"
+            >
+              <Event
+                id="d0fc3bea"
+                event="click"
+                method="trigger"
+                params={{}}
+                pluginId="_GET_inventory"
+                type="datasource"
+                waitMs="0"
+                waitType="debounce"
+              />
+            </Button>
+          </View>
+        </Container>
+        <Spacer id="spacer1" />
         <Select
           id="selectCustomer"
           emptyMessage="No options"
-          itemMode="static"
           label=""
           labelPosition="top"
           overlayMaxHeight={375}

@@ -1,8 +1,24 @@
 {
+  "button1": {
+    "type": "stack",
+    "container": "group1",
+    "subcontainer": "00030",
+    "col": 10,
+    "height": 1,
+    "width": 2,
+    "stackPosition": {
+      "object": {
+        "ordinal": 2,
+        "widthType": "auto",
+        "width": 156,
+        "height": 40
+      }
+    }
+  },
   "container1": {
     "row": 5.6,
     "col": 2,
-    "height": 2.8,
+    "height": 12.2,
     "width": 6,
     "stackPosition": {
       "object": {
@@ -14,10 +30,49 @@
     }
   },
   "containerTitle1": {
+    "type": "stack",
+    "container": "group1",
+    "subcontainer": "00030",
+    "height": 0.6,
+    "width": 5,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fill",
+        "width": 390,
+        "height": 32
+      }
+    }
+  },
+  "group1": {
     "container": "container1",
     "rowGroup": "header",
-    "height": 0.6,
-    "width": 12
+    "height": 3.8,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "invExportButton": {
+    "type": "stack",
+    "container": "group1",
+    "subcontainer": "00030",
+    "col": 8,
+    "height": 1,
+    "width": 2,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "auto",
+        "width": 156,
+        "height": 40
+      }
+    }
   },
   "inventoryTable": {
     "container": "container1",
@@ -37,8 +92,15 @@
     "container": "container1",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 0.6,
+    "row": 4,
+    "height": 0.2
+  },
+  "spacer1": {
+    "container": "container1",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 3.8,
     "height": 0.2,
-    "width": 4
+    "width": 12
   }
 }

@@ -5,6 +5,11 @@
     "height": 0.2,
     "width": 1
   },
+  "avatar2": {
+    "subcontainer": "sidebarFrame1",
+    "height": 0.2,
+    "width": 1
+  },
   "image1": {
     "rowGroup": "header",
     "subcontainer": "sidebarFrame1",
@@ -13,6 +18,7 @@
   },
   "navigation1": {
     "subcontainer": "sidebarFrame1",
+    "row": 2,
     "height": 0.8,
     "width": 1
   }
