@@ -24,7 +24,6 @@
   urlSlug={null}
   uuid="fe7cb60e-4a9c-465d-9a80-564be8cfb572"
 >
-  <Include src="./activeLineContainer.rsx" />
   <Container
     id="linesContainer"
     align="flex-start"
@@ -89,9 +88,11 @@
       />
     </CollectionView>
   </Container>
+  <Include src="./activeLineContainer.rsx" />
   <Button
     id="button1"
     disabled="{{ !_active_line_id.value || _pick_qty.value === get_active_line.value?.quantity_picked }}"
+    hidden="{{ !_active_line_id.value }}"
     loading="{{ pick_line.isFetching || _PICK_line.isFetching }}"
     size="small"
     style={{ map: { background: "#d87706" } }}

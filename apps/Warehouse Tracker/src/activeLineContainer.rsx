@@ -38,61 +38,57 @@
     align="center"
     gap={8}
     justify="flex-start"
-    layout="row"
+    layout="column"
     padding={{ left: 8, right: 8, top: 8, bottom: 8 }}
     showBody={true}
-    style={{ map: { background: "rgb(30, 42, 71)" } }}
+    style={{ map: { background: "#efeff0" } }}
     widthGrowFactor={1}
   >
-    <Icon
-      id="icon1"
-      icon="bold/mail-sign-hashtag"
-      style={{ map: { color: "rgba(255, 255, 255, 1)" } }}
-      widthPx="25"
-    />
     <Container
-      id="container2"
-      align="flex-start"
+      id="container6"
+      align="center"
+      cornerType="square"
       gap={8}
       justify="flex-start"
-      layout="column"
+      layout="row"
       padding={{ left: 0, right: 0, top: 0, bottom: 0 }}
       showBody={true}
       widthGrowFactor={1}
     >
+      <Icon id="icon3" icon="bold/mail-sign-hashtag" style={{}} widthPx="25" />
       <Text
-        id="text5"
+        id="text13"
         markdown={true}
         size="medium"
-        style={{ map: { text: "rgba(255, 255, 255, 1)" } }}
+        style={{}}
         value="## {{ get_active_line.value.rack_code }}"
         weight="normal"
       />
-      <Text
-        id="text6"
-        markdown={true}
-        size="medium"
-        style={{ map: { text: "rgba(255, 255, 255, 0.6)" } }}
-        value="{{ get_active_line.value.rack_units }} units · {{ get_active_line.value.is_partial ? 
-  '1 partial pallet' : 'full pallet' }}"
-        weight="normal"
+      <Status
+        id="status1"
+        _colorByIndex={["#065f46", "#cd6f00", "#dc2626"]}
+        _iconByIndex={[
+          "bold/interface-validation-check-circle",
+          "bold/interface-alert-warning-circle",
+          "bold/interface-delete-circle",
+        ]}
+        _ids={["00030", "00031", "00032"]}
+        _labels={["Completed", "Pending", "Canceled"]}
+        _values={["completed", "pending", "canceled"]}
+        data="[]"
+        hidden="{{ !get_active_line.value.location_confirmed }}"
+        itemMode="static"
+        value="completed"
       />
     </Container>
-    <Status
-      id="status1"
-      _colorByIndex={["#059669", "#cd6f00", "#dc2626"]}
-      _iconByIndex={[
-        "bold/interface-validation-check-circle",
-        "bold/interface-alert-warning-circle",
-        "bold/interface-delete-circle",
-      ]}
-      _ids={["00030", "00031", "00032"]}
-      _labels={["Completed", "Pending", "Canceled"]}
-      _values={["completed", "pending", "canceled"]}
-      data="[]"
-      hidden="{{ !get_active_line.value.location_confirmed }}"
-      itemMode="static"
-      value="completed"
+    <Text
+      id="text12"
+      markdown={true}
+      size="medium"
+      style={{}}
+      value="{{ get_active_line.value.rack_units }} units · {{ get_active_line.value.is_partial ? 
+  '1 partial pallet' : 'full pallet' }}"
+      weight="normal"
     />
     <Event
       id="20a06653"
@@ -109,7 +105,6 @@
     id="text7"
     markdown={true}
     size="medium"
-    textAlign="center"
     value="{{ get_active_line.value.location_confirmed
        ? '✓ Location confirmed at ' + moment(get_active_line.value.location_confirmed_at).format('HH:mm') + ' · Tap to re-confirm' : 'Tap rack to confirm location' }}"
     weight="normal"

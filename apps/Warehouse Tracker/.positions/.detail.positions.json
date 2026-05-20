@@ -15,12 +15,6 @@
     "height": 0,
     "width": 0
   },
-  "container2": {
-    "type": "stack",
-    "container": "container1",
-    "height": 0,
-    "width": 0
-  },
   "container3": {
     "type": "stack",
     "container": "activeLineContainer",
@@ -39,6 +33,11 @@
     "height": 0,
     "width": 0
   },
+  "container6": {
+    "container": "container1",
+    "height": 0,
+    "width": 0
+  },
   "divider1": {
     "type": "stack",
     "container": "activeLineContainer",
@@ -51,15 +50,14 @@
     "height": 0,
     "width": 0
   },
-  "icon1": {
-    "type": "stack",
-    "container": "container1",
-    "height": 0,
-    "width": 0
-  },
   "icon2": {
     "type": "stack",
     "container": "container4",
+    "height": 0,
+    "width": 0
+  },
+  "icon3": {
+    "container": "container6",
     "height": 0,
     "width": 0
   },
@@ -80,8 +78,7 @@
     "width": 0
   },
   "status1": {
-    "type": "stack",
-    "container": "container1",
+    "container": "container6",
     "height": 0,
     "width": 0
   },
@@ -94,6 +91,16 @@
   "text10": {
     "type": "stack",
     "container": "container5",
+    "height": 0,
+    "width": 0
+  },
+  "text12": {
+    "container": "container1",
+    "height": 0,
+    "width": 0
+  },
+  "text13": {
+    "container": "container6",
     "height": 0,
     "width": 0
   },
@@ -112,18 +119,6 @@
   "text4": {
     "type": "stack",
     "container": "activeLineContainer",
-    "height": 0,
-    "width": 0
-  },
-  "text5": {
-    "type": "stack",
-    "container": "container2",
-    "height": 0,
-    "width": 0
-  },
-  "text6": {
-    "type": "stack",
-    "container": "container2",
     "height": 0,
     "width": 0
   },
