@@ -1,0 +1,41 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "a6fb6a26-544e-11f1-b8e0-b77bd3b01426",
+  "appTemplate": {
+    "mobileAppSettings": {
+      "object": {
+        "mobileOfflineModeEnabled": false,
+        "displaySetting": {
+          "object": {
+            "landscapeMode": false,
+            "tabletMode": false
+          }
+        }
+      }
+    },
+    "appMaxWidth": "1560px",
+    "appThemeId": 5110,
+    "experimentalFeatures": {
+      "object": {
+        "sourceControlTemplateDehydration": false
+      }
+    },
+    "preloadedAppJavaScript": "",
+    "pageCodeFolders": {
+      "object": {
+        "list": {
+          "array": []
+        },
+        "detail": {
+          "array": []
+        }
+      }
+    },
+    "queryStatusVisibility": true,
+    "rootScreen": "tabscreen",
+    "isMobileApp": true,
+    "version": "3.392.0",
+    "multiScreenMobileApp": true
+  }
+}
