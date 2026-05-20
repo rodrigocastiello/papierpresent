@@ -7,7 +7,7 @@ const lines = allLines.filter(l => l.call_off_id === callOffId);
 const active = lines.find(l => l.id === activeId);
 if (!active) return null;
 
-const idx = lines.findIndex(l => l.id === activeId) + 1; // 1-based for "Active line N"
+const idx = lines.findIndex(l => l.id === activeId) + 1;
 
 const upc = Number(active.units_per_carton) || 0;
 const picked = Number(pickQty) || 0;
@@ -28,6 +28,19 @@ const meta = [
   active.customer_name,
 ].filter(Boolean).join(' · ');
 
+const statusLabel = {
+  pending:     null,
+  in_progress: 'PARTIAL',
+  complete:    'COMPLETE',
+}[active.line_state];
+
+const statusColor = {
+  pending:     null,
+  in_progress: { bg: '#FEF3C7', text: '#92400E' },
+  complete:    { bg: '#D1FAE5', text: '#065F46' },
+}[active.line_state];
+
+
 return {
   ...active,
   active_index: idx,
@@ -39,4 +52,7 @@ return {
   is_partial: isPartial,
   breakdown_text: breakdown,
   location_confirmed: !!active.location_confirmed_at,
+  status_label: statusLabel,
+  status_color_bg: statusColor?.bg,
+  status_color_text: statusColor?.text,
 };

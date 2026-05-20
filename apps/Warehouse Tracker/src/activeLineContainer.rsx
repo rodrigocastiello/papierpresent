@@ -6,7 +6,7 @@
   hidden="{{ !get_active_line.value }}"
   justify="flex-start"
   layout="column"
-  padding={{ left: 8, right: 8, top: 8, bottom: 8 }}
+  padding={{ left: 12, right: 12, top: 12, bottom: 12 }}
   showBody={true}
   showBorder={true}
   widthGrowFactor={1}
@@ -98,18 +98,8 @@
       id="20a06653"
       event="click"
       method="trigger"
-      params={{
-        map: {
-          options: {
-            map: {
-              additionalScope: {
-                map: { line_id: "{{ _active_line_id.value }}" },
-              },
-            },
-          },
-        },
-      }}
-      pluginId="_CONFIRM_location"
+      params={{ map: { options: { map: { additionalScope: {} } } } }}
+      pluginId="confirm_location"
       type="datasource"
       waitMs="0"
       waitType="debounce"
@@ -171,14 +161,52 @@
       />
     </NumberInput>
   </Container>
-  <Event
-    id="7bfd02d4"
-    event="click"
-    method="trigger"
-    params={{}}
-    pluginId="_GET_call_offs"
-    type="datasource"
-    waitMs="0"
-    waitType="debounce"
-  />
+  <Container
+    id="container4"
+    align="center"
+    gap={8}
+    justify="flex-start"
+    layout="row"
+    padding={{ left: 8, right: 8, top: 8, bottom: 8 }}
+    showBody={true}
+    style={{ map: { background: "#efeff0" } }}
+    widthGrowFactor={1}
+  >
+    <Icon id="icon2" icon="line/shipping-box-2" style={{}} />
+    <Text
+      id="text9"
+      markdown={true}
+      size="medium"
+      value="**{{ get_active_line.value.breakdown_text }}**"
+      weight="normal"
+      width="fixed"
+    />
+    <Container
+      id="container5"
+      align="flex-start"
+      gap={8}
+      hidden="{{ !get_active_line?.value?.status_label }}"
+      justify="center"
+      layout="column"
+      padding={{ left: 8, right: 8, top: 4, bottom: 4 }}
+      showBody={true}
+      style={{
+        map: { background: "{{ get_active_line?.value?.status_color_bg }}" },
+      }}
+      width="fixed"
+      widthGrowFactor={1}
+    >
+      <Text
+        id="text10"
+        markdown={true}
+        size="medium"
+        style={{
+          map: { text: "{{ get_active_line?.value?.status_color_text }}" },
+        }}
+        textAlign="center"
+        value="{{ get_active_line?.value?.status_label }}"
+        weight="normal"
+      />
+    </Container>
+  </Container>
 </Container>

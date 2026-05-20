@@ -27,6 +27,18 @@
     "height": 0,
     "width": 0
   },
+  "container4": {
+    "type": "stack",
+    "container": "activeLineContainer",
+    "height": 0,
+    "width": 0
+  },
+  "container5": {
+    "type": "stack",
+    "container": "container4",
+    "height": 0,
+    "width": 0
+  },
   "divider1": {
     "type": "stack",
     "container": "activeLineContainer",
@@ -42,6 +54,12 @@
   "icon1": {
     "type": "stack",
     "container": "container1",
+    "height": 0,
+    "width": 0
+  },
+  "icon2": {
+    "type": "stack",
+    "container": "container4",
     "height": 0,
     "width": 0
   },
@@ -70,6 +88,12 @@
   "text1": {
     "type": "stack",
     "container": "linesContainer",
+    "height": 0,
+    "width": 0
+  },
+  "text10": {
+    "type": "stack",
+    "container": "container5",
     "height": 0,
     "width": 0
   },
@@ -112,6 +136,12 @@
   "text8": {
     "type": "stack",
     "container": "container3",
+    "height": 0,
+    "width": 0
+  },
+  "text9": {
+    "type": "stack",
+    "container": "container4",
     "height": 0,
     "width": 0
   }

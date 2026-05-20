@@ -20,7 +20,7 @@
       },
     },
   ]}
-  title="{{ get_selected_call_off?.value.code }}"
+  title="{{ get_selected_call_off.value?.code }} · {{ get_selected_call_off.value?.customer_name }}"
   urlSlug={null}
   uuid="fe7cb60e-4a9c-465d-9a80-564be8cfb572"
 >

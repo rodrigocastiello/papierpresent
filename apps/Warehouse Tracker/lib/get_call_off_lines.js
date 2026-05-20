@@ -17,7 +17,7 @@ return rows
   .filter(r => r.call_off_id === callOffId)
   .map(r => {
     const subtitle = r.line_state === 'in_progress'
-      ? `${r.quantity_picked} of ${r.quantity_requested} units · in progress`
+      ? `${r.quantity_picked} of ${r.quantity_requested} units · In progress`
       : `${r.quantity_requested} units`;
 
     return {
