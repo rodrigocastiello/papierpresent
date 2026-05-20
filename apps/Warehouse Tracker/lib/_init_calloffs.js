@@ -1,4 +1,3 @@
 await Promise.all([
-  _GET_calloffs.trigger(),
-  _GET_lines.trigger(),
+  _GET_call_offs.trigger(),
 ]);

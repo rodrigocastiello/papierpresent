@@ -53,17 +53,19 @@
   >
     <CollectionView
       id="listCollection2"
-      bodyByIndex=""
-      data="{{ get_selected_call_off.value.lines }}"
-      prefixIconByIndex="bold/interface-validation-check-circle"
-      prefixIconColorByIndex="green"
+      bodyByIndex="{{ item.line_state === 'in_progress'
+      ? item.quantity_picked + ' of ' + item.quantity_requested + ' units · in progress'
+      : item.quantity_requested + ' units' }}"
+      data="{{ get_call_off_lines.value }}"
+      prefixIconByIndex="{{ item.icon }}"
+      prefixIconColorByIndex="{{ item.color }}"
       prefixImageFitByIndex="cover"
       prefixImageShapeByIndex="square"
       prefixImageSizeByIndex="1 to 1"
       prefixImageSourceByIndex=""
       prefixTypeByIndex="icon"
       showSeparator={true}
-      subtitleByIndex="{{ item. }}"
+      subtitleByIndex=""
       subtitleLengthByIndex="2"
       suffixIconByIndex="bold/interface-arrows-button-right"
       suffixTextByIndex="Button"
