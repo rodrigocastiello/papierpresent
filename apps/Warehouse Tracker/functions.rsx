@@ -35,11 +35,28 @@
     />
     <SqlQueryUnified
       id="_PICK_line"
-      _additionalScope={["line_id", "new_quantity_picked"]}
+      _additionalScope={[
+        "line_id",
+        "new_quantity_picked",
+        "current_user_email",
+      ]}
       query={include("./lib/_PICK_line.sql", "string")}
       resourceDisplayName="retool_db"
       resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
       runWhenModelUpdates={false}
+      warningCodes={[]}
+    />
+    <SqlQueryUnified
+      id="_CONFIRM_location"
+      _additionalScope={["line_id"]}
+      notificationDuration={4.5}
+      query={include("./lib/_CONFIRM_location.sql", "string")}
+      resourceDisplayName="retool_db"
+      resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
+      runWhenModelUpdates={false}
+      showSuccessToaster={false}
+      showUpdateSetValueDynamicallyToggle={false}
+      updateSetValueDynamically={true}
       warningCodes={[]}
     />
   </Folder>
@@ -55,6 +72,10 @@
     <Function
       id="get_call_off_lines"
       funcBody={include("./lib/get_call_off_lines.js", "string")}
+    />
+    <Function
+      id="get_active_line"
+      funcBody={include("./lib/get_active_line.js", "string")}
     />
   </Folder>
   <Folder id="setters">
@@ -79,6 +100,20 @@
       _additionalScope={["line_id", "new_quantity_picked"]}
       notificationDuration={4.5}
       query={include("./lib/pick_line.js", "string")}
+      resourceName="JavascriptQuery"
+      showSuccessToaster={false}
+    />
+    <JavascriptQuery
+      id="select_line"
+      _additionalScope={["active_line_id", "pick_qty"]}
+      notificationDuration={4.5}
+      query={include("./lib/select_line.js", "string")}
+      resourceName="JavascriptQuery"
+      showSuccessToaster={false}
+    />
+    <JavascriptQuery
+      id="confirm_location"
+      notificationDuration={4.5}
       resourceName="JavascriptQuery"
       showSuccessToaster={false}
     />

@@ -20,42 +20,35 @@
       },
     },
   ]}
-  headerRightActions={[
-    {
-      type: "icon",
-      value: "bold/interface-setting-menu-vertical",
-      event: {
-        id: "6a2a0944",
-        event: "click",
-        method: "trigger",
-        pluginId: "",
-        type: "datasource",
-        waitMs: 0,
-        waitType: "debounce",
-      },
-    },
-  ]}
   title="{{ get_selected_call_off?.value.code }}"
   urlSlug={null}
   uuid="fe7cb60e-4a9c-465d-9a80-564be8cfb572"
 >
+  <Include src="./activeLineContainer.rsx" />
   <Container
-    id="container1"
+    id="linesContainer"
     align="flex-start"
     elevation="raised"
     gap={8}
     justify="flex-start"
     layout="column"
-    padding={{ left: 0, right: 0, top: 0, bottom: 0 }}
+    padding={{ left: 0, right: 0, top: 8, bottom: 8 }}
     showBody={true}
     showBorder={true}
     widthGrowFactor={1}
   >
+    <Text
+      id="text1"
+      markdown={true}
+      size="medium"
+      style={{ map: { text: "rgba(154, 152, 152, 1)" } }}
+      textAlign="center"
+      value="**{{ get_selected_call_off.value.line_count }} line{{ get_selected_call_off.value.line_count > 1 ? 's' : '' }}**"
+      weight="normal"
+    />
     <CollectionView
-      id="listCollection2"
-      bodyByIndex="{{ item.line_state === 'in_progress'
-      ? item.quantity_picked + ' of ' + item.quantity_requested + ' units · in progress'
-      : item.quantity_requested + ' units' }}"
+      id="linesListCollection"
+      bodyByIndex=""
       data="{{ get_call_off_lines.value }}"
       prefixIconByIndex="{{ item.icon }}"
       prefixIconColorByIndex="{{ item.color }}"
@@ -65,13 +58,65 @@
       prefixImageSourceByIndex=""
       prefixTypeByIndex="icon"
       showSeparator={true}
-      subtitleByIndex=""
-      subtitleLengthByIndex="2"
-      suffixIconByIndex="bold/interface-arrows-button-right"
-      suffixTextByIndex="Button"
-      suffixTypeByIndex="none"
+      subtitleByIndex="{{ item.subtitle }}"
+      subtitleLengthByIndex="3"
+      suffixIconByIndex=""
+      suffixTextByIndex="{{ item.rack_code || '—' }}"
+      suffixTypeByIndex="text+icon"
       suffixValueByIndex="false"
-      titleByIndex="{{ item.name }}"
-    />
+      titleByIndex="{{ item.product_code }}"
+    >
+      <Event
+        id="cef52cef"
+        event="press"
+        method="trigger"
+        params={{
+          map: {
+            options: {
+              onSuccess: null,
+              onFailure: null,
+              additionalScope: {
+                active_line_id: "{{ item.id }}",
+                pick_qty: "{{ item.quantity_picked || 0 }}",
+              },
+            },
+          },
+        }}
+        pluginId="select_line"
+        type="datasource"
+        waitMs="0"
+        waitType="debounce"
+      />
+    </CollectionView>
   </Container>
+  <Button
+    id="button1"
+    disabled="{{ !_active_line_id.value || _pick_qty.value === get_active_line.value?.quantity_picked }}"
+    loading="{{ pick_line.isFetching || _PICK_line.isFetching }}"
+    size="small"
+    style={{ map: { background: "#d87706" } }}
+    text="Confirm pick"
+  >
+    <Event
+      id="e413c1bc"
+      event="click"
+      method="trigger"
+      params={{
+        map: {
+          options: {
+            map: {
+              additionalScope: {
+                line_id: "{{ _active_line_id.value }}",
+                new_quantity_picked: "{{ _pick_qty.value }}",
+              },
+            },
+          },
+        },
+      }}
+      pluginId="pick_line"
+      type="datasource"
+      waitMs="0"
+      waitType="debounce"
+    />
+  </Button>
 </Screen>
