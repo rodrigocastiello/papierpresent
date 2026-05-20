@@ -11,6 +11,9 @@
         },
         "create": {
           "array": ["_init", "_requests", "_states", "setters", "getters"]
+        },
+        "detail": {
+          "array": ["_init", "_requests", "getters", "setters"]
         }
       }
     },

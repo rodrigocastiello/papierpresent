@@ -44,7 +44,7 @@ await _CREATE_call_off.trigger({
 
     // Refresh the list before navigating so the new row is visible
     await _GET_call_offs.trigger();
-    await go_to_list_page.trigger();
+    await open_list_page.trigger();
   },
 
   onFailure: (err) => {

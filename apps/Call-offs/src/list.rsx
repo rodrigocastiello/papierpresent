@@ -21,9 +21,18 @@
   </Folder>
   <Folder id="setters">
     <JavascriptQuery
-      id="go_to_create_page"
+      id="open_create_page"
       notificationDuration={4.5}
-      query={include("../lib/go_to_create_page.js", "string")}
+      query={include("../lib/open_create_page.js", "string")}
+      resourceName="JavascriptQuery"
+      showSuccessToaster={false}
+    />
+    <JavascriptQuery
+      id="open_details_page"
+      _additionalScope={["call_off_id"]}
+      isMultiplayerEdited={false}
+      notificationDuration={4.5}
+      query={include("../lib/open_details_page.js", "string")}
       resourceName="JavascriptQuery"
       showSuccessToaster={false}
     />
@@ -89,7 +98,7 @@
                 event="click"
                 method="trigger"
                 params={{}}
-                pluginId="go_to_create_page"
+                pluginId="open_create_page"
                 type="datasource"
                 waitMs="0"
                 waitType="debounce"
