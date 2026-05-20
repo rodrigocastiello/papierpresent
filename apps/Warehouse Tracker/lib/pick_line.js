@@ -7,10 +7,13 @@ if (!Number.isFinite(qty) || qty < 0) {
 }
 
 await _PICK_line.trigger({
-  additionalScope: { line_id, new_quantity_picked: qty },
+  additionalScope: {
+    line_id,
+    new_quantity_picked: qty,
+    current_user_email: current_user.email,
+  },
 });
 
-// Refresh the lines list and the call-off summary
 await Promise.all([
   _GET_lines.trigger(),
   _GET_call_offs.trigger(),

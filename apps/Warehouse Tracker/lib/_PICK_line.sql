@@ -15,7 +15,7 @@ target_line AS (
   FOR UPDATE OF col
 ),
 actor AS (
-  SELECT id FROM users WHERE email = {{ current_user.email }} LIMIT 1
+  SELECT id FROM users WHERE email = {{ current_user_email }} LIMIT 1
 ),
 delta_calc AS (
   SELECT
