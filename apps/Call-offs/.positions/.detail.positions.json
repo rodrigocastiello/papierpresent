@@ -40,6 +40,22 @@
       }
     }
   },
+  "container10": {
+    "container": "container6",
+    "subcontainer": "00030",
+    "row": 0.8,
+    "col": 6,
+    "height": 0.2,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
   "container6": {
     "row": 5.8,
     "col": 1,
@@ -54,25 +70,10 @@
       }
     }
   },
-  "container7": {
-    "container": "container6",
-    "subcontainer": "00030",
-    "row": 0,
-    "height": 1,
-    "width": 6,
-    "stackPosition": {
-      "object": {
-        "ordinal": 0,
-        "widthType": "fixed",
-        "width": 0,
-        "height": 0
-      }
-    }
-  },
   "container8": {
     "container": "container6",
     "subcontainer": "00030",
-    "row": 1,
+    "row": 4.6,
     "height": 7.4,
     "width": 12,
     "stackPosition": {
@@ -88,8 +89,7 @@
     "container": "container6",
     "subcontainer": "00030",
     "row": 0,
-    "col": 6,
-    "height": 0.2,
+    "height": 1,
     "width": 6,
     "stackPosition": {
       "object": {
@@ -136,6 +136,12 @@
     "height": 0.6,
     "width": 12
   },
+  "containerTitle8": {
+    "container": "container10",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
   "group5": {
     "container": "container6",
     "rowGroup": "header",
@@ -171,12 +177,6 @@
     "height": 8.6,
     "width": 12
   },
-  "keyValue2": {
-    "container": "container7",
-    "subcontainer": "00030",
-    "height": 0.6,
-    "width": 12
-  },
   "progressBar1": {
     "type": "stack",
     "container": "group6",
@@ -194,12 +194,19 @@
     }
   },
   "steps1": {
-    "container": "container7",
-    "rowGroup": "header",
+    "container": "container6",
     "subcontainer": "00030",
-    "row": 0,
+    "col": 6,
     "height": 1.6,
-    "width": 12
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
   },
   "table2": {
     "container": "container8",
