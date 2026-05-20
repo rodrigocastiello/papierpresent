@@ -37,7 +37,7 @@
       overlayMaxHeight={375}
       placeholder="Select options"
       showSelectionIndicator={true}
-      textBefore="Status"
+      textBefore="State"
       wrapTags={true}
     >
       <Option id="00030" color="#FEF3C7" value="Open" />
