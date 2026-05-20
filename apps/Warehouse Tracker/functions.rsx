@@ -114,6 +114,7 @@
     <JavascriptQuery
       id="confirm_location"
       notificationDuration={4.5}
+      query={include("./lib/confirm_location.js", "string")}
       resourceName="JavascriptQuery"
       showSuccessToaster={false}
     />
