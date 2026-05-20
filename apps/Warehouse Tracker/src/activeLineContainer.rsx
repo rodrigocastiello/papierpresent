@@ -22,7 +22,14 @@
     id="text3"
     markdown={true}
     size="medium"
-    value="{{ get_active_line.value.meta_line }}"
+    value="{{ get_active_line.value.meta_line1 }}"
+    weight="normal"
+  />
+  <Text
+    id="text14"
+    markdown={true}
+    size="medium"
+    value="{{ get_active_line.value.meta_line2 }}"
     weight="normal"
   />
   <Divider id="divider1" spacing={4} />

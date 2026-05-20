@@ -21,11 +21,12 @@ const breakdown = upc === 0
     ? `${fullCartons} carton${fullCartons === 1 ? '' : 's'} + ${remainder} units`
     : `${fullCartons} carton${fullCartons === 1 ? '' : 's'}`;
 
-const meta = [
+const metaLine1 = [
   active.artwork_job_code,
   active.product_category,
-  active.product_size,
 ].filter(Boolean).join(' · ');
+
+const metaLine2 = active.product_size || '';
 
 const statusLabel = {
   pending:     null,
@@ -44,7 +45,8 @@ return {
   ...active,
   active_index: idx,
   total_lines: lines.length,
-  meta_line: meta,
+  meta_line1: metaLine1,
+  meta_line2: metaLine2,
   picked_qty: picked,
   full_cartons: fullCartons,
   remainder_units: remainder,
