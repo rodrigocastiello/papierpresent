@@ -44,7 +44,6 @@
     "container": "container6",
     "subcontainer": "00030",
     "row": 0.8,
-    "col": 6,
     "height": 0.2,
     "width": 6,
     "stackPosition": {
@@ -73,7 +72,7 @@
   "container8": {
     "container": "container6",
     "subcontainer": "00030",
-    "row": 4.6,
+    "row": 1,
     "height": 7.4,
     "width": 12,
     "stackPosition": {
@@ -89,6 +88,7 @@
     "container": "container6",
     "subcontainer": "00030",
     "row": 0,
+    "col": 6,
     "height": 1,
     "width": 6,
     "stackPosition": {
@@ -196,7 +196,6 @@
   "steps1": {
     "container": "container6",
     "subcontainer": "00030",
-    "col": 6,
     "height": 1.6,
     "width": 6,
     "stackPosition": {
