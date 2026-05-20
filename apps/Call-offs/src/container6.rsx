@@ -65,7 +65,7 @@
   </Header>
   <View id="00030" viewKey="View 1">
     <Container
-      id="container7"
+      id="container9"
       footerPadding="4px 12px"
       headerPadding="4px 12px"
       overflowType="hidden"
@@ -74,308 +74,10 @@
       showHeader={true}
     >
       <Header>
-        <Steps
-          id="steps1"
-          horizontalAlign="center"
-          indicateCompletedSteps={true}
-          itemMode="static"
-          showStepNumbers={true}
-          value="{{ self.values[0] }}"
-        >
-          <Option id="00030" value="Open" />
-          <Option id="00031" value="Picking" />
-          <Option id="00032" value="Shipped" />
-          <Option id="8b7ef" hidden={false} value="Cancelled" />
-        </Steps>
-      </Header>
-      <View id="00030" viewKey="View 1">
-        <KeyValue
-          id="keyValue2"
-          data="{{ get_call_off_detail.value }}"
-          editIcon="bold/interface-edit-pencil"
-          enableSaveActions={true}
-          groupLayout="wrap"
-          itemLabelPosition="top"
-          minColumnWidth=""
-        >
-          <Property
-            id="id"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="ID"
-          />
-          <Property
-            id="code"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Code"
-          />
-          <Property
-            id="customer_id"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Customer ID"
-          />
-          <Property
-            id="state"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="false"
-            label="State"
-            valueOverride="{{ _.startCase(item) }}"
-          />
-          <Property
-            id="requested_date"
-            editable="false"
-            editableOptions={{}}
-            format="date"
-            formatOptions={{}}
-            hidden="false"
-            label="Requested date"
-          />
-          <Property
-            id="customer_deadline"
-            editable="false"
-            editableOptions={{}}
-            format="date"
-            formatOptions={{}}
-            hidden="true"
-            label="Customer deadline"
-          />
-          <Property
-            id="delivery_mode"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Delivery mode"
-          />
-          <Property
-            id="notes"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Notes"
-          />
-          <Property
-            id="created_at"
-            editable="false"
-            editableOptions={{}}
-            format="datetime"
-            formatOptions={{}}
-            hidden="true"
-            label="Created at"
-          />
-          <Property
-            id="updated_at"
-            editable="false"
-            editableOptions={{}}
-            format="datetime"
-            formatOptions={{}}
-            hidden="true"
-            label="Updated at"
-          />
-          <Property
-            id="customer_name"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Customer name"
-          />
-          <Property
-            id="customer_contact"
-            editable="false"
-            editableOptions={{}}
-            format="link"
-            formatOptions={{ showUnderline: "hover" }}
-            hidden="true"
-            label="Customer contact"
-          />
-          <Property
-            id="created_by_email"
-            editable="false"
-            editableOptions={{}}
-            format="link"
-            formatOptions={{ showUnderline: "hover" }}
-            hidden="true"
-            label="Created by email"
-          />
-          <Property
-            id="line_count"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Line count"
-          />
-          <Property
-            id="units_requested"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Units requested"
-          />
-          <Property
-            id="active_call_offs"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Active call offs"
-          />
-          <Property
-            id="active_artwork_jobs"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Active artwork jobs"
-          />
-          <Property
-            id="on_hand_units"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="On hand units"
-          />
-          <Property
-            id="state_label"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="State label"
-          />
-          <Property
-            id="state_step"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="State step"
-          />
-          <Property
-            id="state_color"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="State color"
-          />
-          <Property
-            id="is_cancelled"
-            editable="false"
-            editableOptions={{}}
-            format="boolean"
-            formatOptions={{}}
-            hidden="true"
-            label="Is cancelled"
-          />
-          <Property
-            id="is_shipped"
-            editable="false"
-            editableOptions={{}}
-            format="boolean"
-            formatOptions={{}}
-            hidden="true"
-            label="Is shipped"
-          />
-          <Property
-            id="is_terminal"
-            editable="false"
-            editableOptions={{}}
-            format="boolean"
-            formatOptions={{}}
-            hidden="true"
-            label="Is terminal"
-          />
-          <Property
-            id="delivery_mode_label"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="false"
-            label="Delivery mode"
-          />
-          <Property
-            id="delivery_charge_amount"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Delivery charge amount"
-          />
-          <Property
-            id="delivery_charge_label"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="false"
-            label="Delivery charge"
-          />
-          <Property
-            id="days_to_deadline"
-            editable="false"
-            editableOptions={{ showStepper: true }}
-            format="decimal"
-            formatOptions={{ showSeparators: true, notation: "standard" }}
-            hidden="true"
-            label="Days to deadline"
-          />
-          <Property
-            id="days_to_deadline_label"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Days to deadline label"
-          />
-        </KeyValue>
-      </View>
-    </Container>
-    <Container
-      id="container9"
-      footerPadding="4px 12px"
-      headerPadding="4px 12px"
-      padding="12px"
-      showBody={true}
-      showHeader={true}
-    >
-      <Header>
         <Text
           id="containerTitle7"
           style={{ fontSize: "14px", fontWeight: "400", fontFamily: "Inter" }}
-          value="**Call-off**"
+          value="**Detail**"
           verticalAlign="center"
         />
       </Header>
@@ -414,6 +116,15 @@
             formatOptions={{}}
             hidden="true"
             label="Updated at"
+          />
+          <Property
+            id="requested_date"
+            editable="false"
+            editableOptions={{}}
+            format="date"
+            formatOptions={{}}
+            hidden="false"
+            label="Requested date"
           />
           <Property
             id="customer_name"
@@ -485,8 +196,17 @@
             editableOptions={{ spellCheck: false }}
             format="string"
             formatOptions={{}}
-            hidden="false"
+            hidden="true"
             label="Delivery mode"
+          />
+          <Property
+            id="delivery_mode_label"
+            editable="false"
+            editableOptions={{ spellCheck: false }}
+            format="string"
+            formatOptions={{}}
+            hidden="false"
+            label="Delivery mode label"
           />
           <Property
             id="delivery_charge_label"
@@ -495,7 +215,7 @@
             format="string"
             formatOptions={{}}
             hidden="false"
-            label="Charge"
+            label="Delivery charge"
           />
           <Property
             id="customer_deadline"
@@ -550,15 +270,6 @@
             formatOptions={{ showSeparators: true, notation: "standard" }}
             hidden="true"
             label="Customer ID"
-          />
-          <Property
-            id="requested_date"
-            editable="false"
-            editableOptions={{}}
-            format="date"
-            formatOptions={{}}
-            hidden="true"
-            label="Requested date"
           />
           <Property
             id="line_count"
@@ -624,15 +335,6 @@
             label="Is terminal"
           />
           <Property
-            id="delivery_mode_label"
-            editable="false"
-            editableOptions={{ spellCheck: false }}
-            format="string"
-            formatOptions={{}}
-            hidden="true"
-            label="Delivery mode label"
-          />
-          <Property
             id="delivery_charge_amount"
             editable="false"
             editableOptions={{ showStepper: true }}
@@ -652,6 +354,36 @@
           />
         </KeyValue>
       </View>
+    </Container>
+    <Steps
+      id="steps1"
+      horizontalAlign="center"
+      indicateCompletedSteps={true}
+      itemMode="static"
+      value="{{ self.values[0] }}"
+    >
+      <Option id="00030" value="Open" />
+      <Option id="00031" value="Picking" />
+      <Option id="00032" value="Shipping" />
+      <Option id="b3087" hidden={false} value="Cancelled" />
+    </Steps>
+    <Container
+      id="container10"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      padding="12px"
+      showBody={true}
+      showHeader={true}
+    >
+      <Header>
+        <Text
+          id="containerTitle8"
+          style={{ fontSize: "14px", fontWeight: "400", fontFamily: "Inter" }}
+          value="**Activity**"
+          verticalAlign="center"
+        />
+      </Header>
+      <View id="00030" viewKey="View 1" />
     </Container>
     <Container
       id="container8"
