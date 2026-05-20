@@ -40,13 +40,6 @@
       showSuccessToaster={false}
     />
     <JavascriptQuery
-      id="go_to_list_page"
-      notificationDuration={4.5}
-      query={include("../lib/go_to_list_page.js", "string")}
-      resourceName="JavascriptQuery"
-      showSuccessToaster={false}
-    />
-    <JavascriptQuery
       id="save_lines"
       _additionalScope={["changes"]}
       notificationDuration={4.5}
@@ -186,7 +179,7 @@
                 event="click"
                 method="trigger"
                 params={{}}
-                pluginId="go_to_list_page"
+                pluginId="open_list_page"
                 type="datasource"
                 waitMs="0"
                 waitType="debounce"

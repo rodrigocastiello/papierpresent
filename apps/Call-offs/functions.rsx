@@ -52,4 +52,13 @@
       funcBody={include("./lib/get_customers.js", "string")}
     />
   </Folder>
+  <Folder id="helpers">
+    <JavascriptQuery
+      id="open_list_page"
+      notificationDuration={4.5}
+      query={include("./lib/open_list_page.js", "string")}
+      resourceName="JavascriptQuery"
+      showSuccessToaster={false}
+    />
+  </Folder>
 </GlobalFunctions>

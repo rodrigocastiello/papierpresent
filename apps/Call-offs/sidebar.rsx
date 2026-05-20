@@ -38,6 +38,7 @@
       screenTargetIdByIndex=""
       src={null}
       srcType={null}
+      style={{}}
       tooltipByIndex=""
     >
       <Option

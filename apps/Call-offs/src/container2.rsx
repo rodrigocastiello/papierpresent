@@ -79,6 +79,7 @@
   <View id="00030" viewKey="View 1">
     <Table
       id="table1"
+      actionsOverflowPosition={1}
       cellSelection="none"
       clearChangesetOnSave={true}
       data="{{ get_call_offs.value }}"
@@ -102,7 +103,7 @@
       emptyMessage="No rows found"
       enableSaveActions={true}
       heightType="auto"
-      primaryKeyColumnId="aac1e"
+      primaryKeyColumnId="4ed77"
       rowHeight="small"
       searchTerm="{{ textInput1.value }}"
       showBorder={true}
@@ -221,6 +222,47 @@
         size={100}
         summaryAggregationMode="none"
       />
+      <Column
+        id="4ed77"
+        alignment="right"
+        editableOptions={{ showStepper: true }}
+        format="decimal"
+        formatOptions={{ showSeparators: true, notation: "standard" }}
+        groupAggregationMode="sum"
+        hidden="true"
+        key="id"
+        label="ID"
+        placeholder="Enter value"
+        position="center"
+        size={100}
+        summaryAggregationMode="none"
+      />
+      <Action
+        id="0be83"
+        icon="line/interface-arrows-button-right"
+        label="Details"
+      >
+        <Event
+          id="8cf03342"
+          event="clickAction"
+          method="trigger"
+          params={{
+            map: {
+              options: {
+                map: {
+                  additionalScope: {
+                    map: { call_off_id: "{{ currentSourceRow.id }}" },
+                  },
+                },
+              },
+            },
+          }}
+          pluginId="open_details_page"
+          type="datasource"
+          waitMs="0"
+          waitType="debounce"
+        />
+      </Action>
     </Table>
   </View>
 </Container>

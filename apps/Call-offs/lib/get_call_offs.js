@@ -1,6 +1,7 @@
   const rows = formatDataAsArray({{ _GET_call_offs.data }}) || [];
 
   const shaped = rows.map(r => ({
+    id: r.id,
     call_off_id: r.code,
     customer: r.customer_name,
     requested: r.requested_date,
