@@ -48,6 +48,20 @@
       showSuccessToaster={false}
       warningCodes={[]}
     />
+    <SqlQueryUnified
+      id="_UPDATE_call_off_state"
+      _additionalScope={["new_state", "call_off_id"]}
+      notificationDuration={4.5}
+      query={include("../lib/_UPDATE_call_off_state.sql", "string")}
+      resourceDisplayName="retool_db"
+      resourceName="83bbb14a-41f7-4f23-9be3-2529164d13ee"
+      runWhenModelUpdates={false}
+      showFailureToaster={false}
+      showSuccessToaster={false}
+      showUpdateSetValueDynamicallyToggle={false}
+      updateSetValueDynamically={true}
+      warningCodes={[]}
+    />
   </Folder>
   <Folder id="getters">
     <Function
@@ -61,6 +75,10 @@
     <Function
       id="get_call_off_activity"
       funcBody={include("../lib/get_call_off_activity.js", "string")}
+    />
+    <Function
+      id="get_call_off_progress"
+      funcBody={include("../lib/get_call_off_progress.js", "string")}
     />
   </Folder>
   <Folder id="setters">
@@ -79,7 +97,7 @@
       showSuccessToaster={false}
     />
   </Folder>
-  <connectResource id="query1" _componentId="table2" />
+  <Include src="./splitPaneFrame1.rsx" />
   <Frame
     id="$main3"
     enableFullBleed={true}
