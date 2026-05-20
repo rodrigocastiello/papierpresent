@@ -96,7 +96,7 @@
     "subcontainer": "00030",
     "col": 3,
     "height": 0.2,
-    "width": 5,
+    "width": 4,
     "stackPosition": {
       "object": {
         "ordinal": 0,
@@ -116,7 +116,7 @@
     "container": "container2",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "col": 8,
+    "col": 7,
     "height": 0.2
   },
   "spacer1": {
