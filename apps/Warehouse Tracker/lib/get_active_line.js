@@ -25,7 +25,6 @@ const meta = [
   active.artwork_job_code,
   active.product_category,
   active.product_size,
-  active.customer_name,
 ].filter(Boolean).join(' · ');
 
 const statusLabel = {
