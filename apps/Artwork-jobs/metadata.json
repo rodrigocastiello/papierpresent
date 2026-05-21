@@ -6,7 +6,7 @@
     "pageCodeFolders": {
       "object": {
         "link": {
-          "array": []
+          "array": ["_init", "_requests", "_states", "getters", "setters"]
         }
       }
     },

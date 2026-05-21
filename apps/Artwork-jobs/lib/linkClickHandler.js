@@ -1,0 +1,1 @@
+tabs1.value === "Create new" ? create_artwork_job.trigger() : link_product.trigger()
