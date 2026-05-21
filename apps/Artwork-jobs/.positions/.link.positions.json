@@ -169,7 +169,6 @@
     "container": "container3",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 0,
     "col": 4,
     "height": 0.2,
     "width": 4
@@ -178,7 +177,6 @@
     "container": "container3",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 0,
     "col": 8,
     "height": 0.2,
     "width": 4,
@@ -252,7 +250,6 @@
     "container": "container3",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 0,
     "height": 0.2,
     "width": 4
   }
