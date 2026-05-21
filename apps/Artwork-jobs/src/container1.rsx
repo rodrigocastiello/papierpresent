@@ -23,7 +23,7 @@
         color: "#8d9194",
       }}
       value={
-        '{{ (_GET_artwork_jobs_stats.data?.[0]?.unlinked_count ?? 0) + " unlinked Odoo products · " +\n  (_GET_artwork_jobs_stats.data?.[0]?.active_count ?? 0) + " active artwork-jobs" }}'
+        '{{ (_GET_artwork_jobs_stats?.data?.unlinked_count[0] ?? 0) + " unlinked Odoo products · " +\n  (_GET_artwork_jobs_stats?.data?.active_count[0] ?? 0) + " active artwork-jobs" }}'
       }
       verticalAlign="center"
     />
@@ -83,6 +83,27 @@
               id="select3"
               captionByIndex=""
               colorByIndex=""
+              data="{{ get_customer_filter_option.value }}"
+              disabledByIndex=""
+              emptyMessage="No options"
+              fallbackTextByIndex=""
+              hiddenByIndex=""
+              iconByIndex=""
+              imageByIndex=""
+              label=""
+              labelPosition="top"
+              labels="{{ item.label }}"
+              overlayMaxHeight={375}
+              placeholder="Customer"
+              showClear={true}
+              showSelectionIndicator={true}
+              tooltipByIndex=""
+              values="{{ item.value }}"
+            />
+            <Select
+              id="select4"
+              captionByIndex=""
+              colorByIndex=""
               data=""
               disabledByIndex=""
               emptyMessage="No options"
@@ -95,23 +116,21 @@
               labelPosition="top"
               labels=""
               overlayMaxHeight={375}
-              placeholder="Customer"
+              placeholder="Synced"
+              showClear={true}
               showSelectionIndicator={true}
               tooltipByIndex=""
               values=""
-            />
-            <Select
-              id="select4"
-              emptyMessage="No options"
-              label=""
-              labelPosition="top"
-              overlayMaxHeight={375}
-              placeholder="Synced"
-              showSelectionIndicator={true}
             >
-              <Option id="00030" value="Option 1" />
-              <Option id="00031" value="Option 2" />
-              <Option id="00032" value="Option 3" />
+              <Option id="00031" label="Last 24 hours" value="24h" />
+              <Option id="00032" label="Last 7 days" value="7d" />
+              <Option
+                id="5de1f"
+                disabled={false}
+                hidden={false}
+                label="Last 30 days"
+                value="30d"
+              />
             </Select>
           </Header>
           <View id="00030" viewKey="View 1">
@@ -424,13 +443,9 @@
         <Text
           id="text2"
           style={{ map: { color: "#393e4f" } }}
-          value="**Why link?** Artwork-jobs are the durable identity that survives product churn. When a customer reorders, Odoo mints a new P-number
-   for that print run — but the carton, the size, the artwork are the same job. Linking the P-number to its artwork-job
-  means inventory, call-offs, and history all roll up under one stable code (AJ-XXXXX) instead of fragmenting across
-  reprints.
+          value="**Why link?** Artwork-jobs are the durable identity that survives product churn. When a customer reorders, Odoo mints a new P-number for that print run — but the carton, the size, the artwork are the same job. Linking the P-number to its artwork-job means inventory, call-offs, and history all roll up under one stable code (AJ-XXXXX) instead of fragmenting across reprints.
   
-Unlinked products don't show up in Inventory or Call-offs. Linking them takes them out of this queue and into
-  circulation."
+Unlinked products don't show up in Inventory or Call-offs. Linking them takes them out of this queue and into circulation."
           verticalAlign="center"
         />
       </View>

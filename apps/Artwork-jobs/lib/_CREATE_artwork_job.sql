@@ -1,23 +1,26 @@
-WITH next_id AS (   
-  SELECT nextval('artwork_jobs_id_seq') AS id
+WITH next_n AS (
+  SELECT (GREATEST(
+    COALESCE((SELECT MAX(id) FROM artwork_jobs), 0),
+    COALESCE((SELECT MAX(NULLIF(substring(code FROM 'AJ-(\d+)'), '')::int) FROM artwork_jobs), 0)
+  ) + 1) AS n
+),
+seq_sync AS (
+  SELECT setval('artwork_jobs_id_seq', (SELECT n FROM next_n))
 ),
 new_aj AS (
-  INSERT INTO artwork_jobs (id, code, name, category, customer_id, created_at, updated_at)
+  INSERT INTO artwork_jobs (id, code, name, category, customer_id)
   SELECT
-    n.id,
-    'AJ-' || LPAD(n.id::text, 5, '0'),
+    nx.n,
+    'AJ-' || LPAD(nx.n::text, 5, '0'),
     {{ payload.name }},
     {{ payload.category }},
-    {{ payload.customer_id }},
-    NOW(),
-    NOW() 
-  FROM next_id n
+    {{ payload.customer_id }}
+  FROM next_n nx
   RETURNING id, code
 ),
 link AS (
   UPDATE products
-  SET artwork_job_id = (SELECT id FROM new_aj),
-      updated_at     = NOW()
+  SET artwork_job_id = (SELECT id FROM new_aj)
   WHERE id = {{ payload.product_id }}
   RETURNING id
 )
