@@ -81,12 +81,24 @@
             />
             <Select
               id="select3"
+              captionByIndex=""
+              colorByIndex=""
+              data=""
+              disabledByIndex=""
               emptyMessage="No options"
+              fallbackTextByIndex=""
+              hiddenByIndex=""
+              iconByIndex=""
+              imageByIndex=""
+              itemMode="static"
               label=""
               labelPosition="top"
+              labels=""
               overlayMaxHeight={375}
               placeholder="Customer"
               showSelectionIndicator={true}
+              tooltipByIndex=""
+              values=""
             />
             <Select
               id="select4"
@@ -122,6 +134,7 @@
               heightType="auto"
               primaryKeyColumnId="e99ec"
               rowHeight="small"
+              searchTerm="{{ textInput1.value }}"
               showBorder={true}
               showFooter={true}
               showHeader={true}
@@ -367,6 +380,7 @@
             <View id="00030" viewKey="View 1">
               <Text
                 id="text5"
+                style={{ map: { color: "primary" } }}
                 value={'{{ "**" + item.artwork_job_code + "**" }}'}
                 verticalAlign="center"
               />
@@ -407,7 +421,18 @@
         />
       </Header>
       <View id="00030" viewKey="View 1">
-        <Text id="text2" value="**Why link?**" verticalAlign="center" />
+        <Text
+          id="text2"
+          style={{ map: { color: "#393e4f" } }}
+          value="**Why link?** Artwork-jobs are the durable identity that survives product churn. When a customer reorders, Odoo mints a new P-number
+   for that print run — but the carton, the size, the artwork are the same job. Linking the P-number to its artwork-job
+  means inventory, call-offs, and history all roll up under one stable code (AJ-XXXXX) instead of fragmenting across
+  reprints.
+  
+Unlinked products don't show up in Inventory or Call-offs. Linking them takes them out of this queue and into
+  circulation."
+          verticalAlign="center"
+        />
       </View>
     </Container>
   </View>

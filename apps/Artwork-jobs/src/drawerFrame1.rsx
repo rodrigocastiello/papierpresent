@@ -33,10 +33,20 @@
       <Event
         id="b3dec680"
         event="click"
-        method="setHidden"
-        params={{ map: { hidden: true } }}
-        pluginId="drawerFrame1"
-        type="widget"
+        method="trigger"
+        params={{
+          map: {
+            options: {
+              object: {
+                onSuccess: null,
+                onFailure: null,
+                additionalScope: null,
+              },
+            },
+          },
+        }}
+        pluginId="cancel_link"
+        type="datasource"
         waitMs="0"
         waitType="debounce"
       />

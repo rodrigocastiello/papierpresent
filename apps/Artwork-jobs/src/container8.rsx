@@ -5,7 +5,12 @@
   headerPadding="4px 12px"
   padding="12px"
   showBody={true}
-  style={{ background: "#e7eef6", border: "#393e4f" }}
+  style={{
+    background:
+      '{{ _selected_artwork_job.value?.artwork_job_id ===\n  get_artwork_job_candidates.value?.suggested?.artwork_job_id ? "#E7EEF6" : "transparent" }}',
+    border:
+      '{{ _selected_artwork_job.value?.artwork_job_id ===\n  get_artwork_job_candidates.value?.suggested?.artwork_job_id ? "#393E4F" : "#E5E7EB" }}',
+  }}
 >
   <Header>
     <Text
