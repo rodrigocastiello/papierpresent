@@ -1,7 +1,7 @@
 {
   "alert1": {
     "container": "form1",
-    "row": 0.6,
+    "row": 0,
     "height": 2.4,
     "width": 12
   },
@@ -37,7 +37,7 @@
   },
   "container3": {
     "container": "form1",
-    "row": 0,
+    "row": 0.2,
     "height": 0.2,
     "width": 6,
     "stackPosition": {
@@ -51,7 +51,7 @@
   },
   "container7": {
     "container": "form1",
-    "row": 0.2,
+    "row": 0.4,
     "height": 0.2,
     "width": 6,
     "stackPosition": {
@@ -65,7 +65,7 @@
   },
   "container8": {
     "container": "form1",
-    "row": 0.4,
+    "row": 0.6,
     "height": 0.2,
     "width": 6,
     "stackPosition": {
@@ -79,7 +79,7 @@
   },
   "container9": {
     "container": "form1",
-    "row": 0,
+    "row": 0.2,
     "col": 6,
     "height": 0.2,
     "width": 6,

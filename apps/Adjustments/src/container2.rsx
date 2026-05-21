@@ -66,6 +66,75 @@
         <Text id="formTitle1" value="#### Form title" verticalAlign="center" />
       </Header>
       <Body>
+        <Alert2 id="alert1" style={{}} value="warning">
+          <State
+            id="0"
+            actionIconPositions="right"
+            actionPositions="bottom"
+            actionTexts="Action"
+            actionTooltips={null}
+            backgroundColors={null}
+            borderColors={null}
+            colors={null}
+            descriptions="Description"
+            iconPositions="center"
+            icons="bold/interface-alert-information-circle"
+            styleVariants="info"
+            titles="Info"
+            tooltips={null}
+            values="info"
+          />
+          <State
+            id="1"
+            actionIconPositions="right"
+            actionPositions="bottom"
+            actionTexts="Action"
+            actionTooltips={null}
+            backgroundColors={null}
+            borderColors={null}
+            colors={null}
+            descriptions="Description"
+            iconPositions="center"
+            icons="bold/interface-validation-check-circle"
+            styleVariants="success"
+            titles="Success"
+            tooltips={null}
+            values="success"
+          />
+          <State
+            id="2"
+            actionIconPositions="right"
+            actionPositions="bottom"
+            actionTooltips={null}
+            backgroundColors={null}
+            borderColors={null}
+            colors={null}
+            descriptions="They cannot be undone, only reversed by a new adjustment in the opposite direction."
+            iconPositions="center"
+            icons="bold/interface-alert-warning-triangle"
+            styleVariants="warning"
+            titles="Adjustments write a permanent audit row"
+            tooltips={null}
+            values="warning"
+          />
+          <State
+            id="3"
+            actionIconPositions="right"
+            actionPositions="bottom"
+            actionTexts="Action"
+            actionTooltips={null}
+            backgroundColors={null}
+            borderColors={null}
+            colors={null}
+            descriptions="Description"
+            iconPositions="center"
+            icons="bold/interface-delete-circle"
+            styleVariants="error"
+            titles="Error"
+            tooltips={null}
+            values="error"
+          />
+        </Alert2>
         <Include src="./container3.rsx" />
         <Container
           id="container9"
@@ -378,75 +447,6 @@
             />
           </View>
         </Container>
-        <Alert2 id="alert1" style={{}} value="warning">
-          <State
-            id="0"
-            actionIconPositions="right"
-            actionPositions="bottom"
-            actionTexts="Action"
-            actionTooltips={null}
-            backgroundColors={null}
-            borderColors={null}
-            colors={null}
-            descriptions="Description"
-            iconPositions="center"
-            icons="bold/interface-alert-information-circle"
-            styleVariants="info"
-            titles="Info"
-            tooltips={null}
-            values="info"
-          />
-          <State
-            id="1"
-            actionIconPositions="right"
-            actionPositions="bottom"
-            actionTexts="Action"
-            actionTooltips={null}
-            backgroundColors={null}
-            borderColors={null}
-            colors={null}
-            descriptions="Description"
-            iconPositions="center"
-            icons="bold/interface-validation-check-circle"
-            styleVariants="success"
-            titles="Success"
-            tooltips={null}
-            values="success"
-          />
-          <State
-            id="2"
-            actionIconPositions="right"
-            actionPositions="bottom"
-            actionTooltips={null}
-            backgroundColors={null}
-            borderColors={null}
-            colors={null}
-            descriptions="They cannot be undone, only reversed by a new adjustment in the opposite direction."
-            iconPositions="center"
-            icons="bold/interface-alert-warning-triangle"
-            styleVariants="warning"
-            titles="Adjustments write a permanent audit row"
-            tooltips={null}
-            values="warning"
-          />
-          <State
-            id="3"
-            actionIconPositions="right"
-            actionPositions="bottom"
-            actionTexts="Action"
-            actionTooltips={null}
-            backgroundColors={null}
-            borderColors={null}
-            colors={null}
-            descriptions="Description"
-            iconPositions="center"
-            icons="bold/interface-delete-circle"
-            styleVariants="error"
-            titles="Error"
-            tooltips={null}
-            values="error"
-          />
-        </Alert2>
       </Body>
       <Footer>
         <Button
