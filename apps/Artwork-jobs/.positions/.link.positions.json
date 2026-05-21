@@ -51,7 +51,6 @@
   "categorySelect": {
     "container": "tabbedContainer1",
     "subcontainer": "00031",
-    "row": 0,
     "col": 7,
     "height": 0.2,
     "width": 5,
@@ -292,7 +291,6 @@
     "container": "container7",
     "rowGroup": "header",
     "subcontainer": "00030",
-    "row": 0,
     "height": 8.6,
     "width": 12
   },
@@ -558,7 +556,6 @@
   "text5": {
     "container": "container5",
     "subcontainer": "00030",
-    "row": 0,
     "col": 2,
     "height": 0.6,
     "width": 10,
