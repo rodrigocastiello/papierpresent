@@ -48,7 +48,6 @@
       value="**Suggested Match**"
       verticalAlign="center"
     />
-    <Divider id="divider1" />
     <Include src="./container8.rsx" />
     <Text
       id="text13"
@@ -58,10 +57,11 @@
         fontWeight: "400",
         fontFamily: "Inter",
       }}
-      value="**Other artwork-jobs**"
+      value={
+        '{{ "**Other artwork-jobs** · " + (_selected_product.value?.customer_name || "") + " (" +\n  (get_artwork_job_candidates.value?.others?.length || 0) + ")" }}'
+      }
       verticalAlign="center"
     />
-    <Divider id="divider2" />
     <ListViewBeta
       id="otherJobsList"
       data="{{ get_artwork_job_candidates.value?.others }}"
@@ -79,7 +79,13 @@
     iconPosition="left"
     viewKey="Create new"
   >
-    <TextInput id="nameInput" labelPosition="top" placeholder="Enter value" />
+    <TextInput
+      id="nameInput"
+      label="Name"
+      labelPosition="top"
+      placeholder="Enter value"
+      required={true}
+    />
     <Select
       id="categorySelect"
       emptyMessage="No options"
@@ -88,6 +94,7 @@
       labelPosition="top"
       overlayMaxHeight={375}
       placeholder="Select an option"
+      required={true}
       showSelectionIndicator={true}
     >
       <Option id="00030" value="Bags" />

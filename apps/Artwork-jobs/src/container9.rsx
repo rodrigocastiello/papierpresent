@@ -5,10 +5,10 @@
   padding="12px"
   showBody={true}
   style={{
-    map: {
-      border:
-        '{{ _selected_artwork_job.value?.artwork_job_id === item.artwork_job_id ? "#F97316" : "#e5e7eb" }}',
-    },
+    border:
+      '{{ _selected_artwork_job.value?.artwork_job_id === item.artwork_job_id ? "#393E4F" : "#E5E7EB" }}',
+    background:
+      '{{ _selected_artwork_job.value?.artwork_job_id === item.artwork_job_id ? "#E7EEF6" : "transparent"\n  }}',
   }}
 >
   <Header>
