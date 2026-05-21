@@ -6,10 +6,9 @@ WITH actor AS (
 ), 
 upd AS (
   UPDATE products
-  SET artwork_job_id = {{ payload.artwork_job_id }},
-      updated_at     = NOW()
+  SET artwork_job_id = {{ payload.artwork_job_id }}
   WHERE id = {{ payload.product_id }}
-    AND artwork_job_id IS NULL          -- guard: don't relink
+    AND artwork_job_id IS NULL
   RETURNING id, code, customer_id, artwork_job_id
 )
 SELECT u.id, u.code, u.customer_id, u.artwork_job_id, aj.code AS artwork_job_code

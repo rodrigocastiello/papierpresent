@@ -21,12 +21,14 @@ await _CREATE_artwork_job.trigger({
     },
   },
 
-  onSuccess: async (data) => {
-    const row = (data && data[0]) || {};
-    utils.showNotification({
+  onSuccess: async () => {
+    const rows = formatDataAsArray(_CREATE_artwork_job.data) || [];
+    const newCode = rows[0]?.artwork_job_code || "the new artwork-job";
+
+    utils.showNotification({ 
       notificationType: "success",
       title: "Artwork-job created",
-      description: `${product.p_number} → ${row.artwork_job_code}`,
+      description: `${product.p_number} → ${newCode}`,
     });
     drawerFrame1.setHidden(true);
     nameInput.resetValue();
@@ -43,6 +45,6 @@ await _CREATE_artwork_job.trigger({
       notificationType: "error",
       title: "Could not create artwork-job",
       description: String(err?.message || err),
-    });
+    });   
   },
 });

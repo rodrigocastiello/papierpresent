@@ -8,7 +8,17 @@ const colorFor = (name) => {
   return palette[h % palette.length];
 };
 
-return rows.map(r => ({
+const customerFilter = {{select3.value}};        // null = All
+const syncedFilter   = {{select4.value}} || "";  // "" = All time
+
+const windowMs = {
+  "24h": 24 * 60 * 60 * 1000,
+  "7d":  7  * 24 * 60 * 60 * 1000,
+  "30d": 30 * 24 * 60 * 60 * 1000,
+};
+const now = Date.now();
+
+const enriched = rows.map(r => ({
   id: r.product_id,
   p_number: r.p_number,
   odoo_product_name: r.odoo_product_name || r.product_display_name || "",
@@ -22,3 +32,15 @@ return rows.map(r => ({
   synced_at: r.synced_at,
   synced_label: r.synced_at ? moment(r.synced_at).fromNow() : "—",
 }));
+
+return enriched.filter(row => {
+  if (customerFilter && row.customer_id !== customerFilter) return false;
+
+  if (syncedFilter && windowMs[syncedFilter]) {
+    if (!row.synced_at) return false;
+    const age = now - new Date(row.synced_at).getTime();
+    if (age > windowMs[syncedFilter]) return false;
+  }
+
+  return true;
+});

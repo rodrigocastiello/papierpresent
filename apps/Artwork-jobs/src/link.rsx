@@ -5,7 +5,7 @@
   _order={0}
   _searchParams={[]}
   browserTitle=""
-  title="Page 1"
+  title="Link"
   urlSlug=""
   uuid="7990a8a4-d615-47e7-8704-277c40840bb3"
 >
@@ -77,6 +77,10 @@
     <Function
       id="get_artwork_job_candidates"
       funcBody={include("../lib/get_artwork_job_candidates.js", "string")}
+    />
+    <Function
+      id="get_customer_filter_option"
+      funcBody={include("../lib/get_customer_filter_option.js", "string")}
     />
   </Folder>
   <Folder id="_requests">
