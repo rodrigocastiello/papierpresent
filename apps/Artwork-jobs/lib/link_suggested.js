@@ -1,0 +1,1 @@
+_selected_artwork_job.setValue(artwork_job)
