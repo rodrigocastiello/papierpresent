@@ -6,10 +6,10 @@
     "pageCodeFolders": {
       "object": {
         "list": {
-          "array": ["setters"]
+          "array": ["_init", "_requests", "setters", "getters"]
         },
         "create": {
-          "array": []
+          "array": ["_init", "_requests", "getters", "setters"]
         }
       }
     },

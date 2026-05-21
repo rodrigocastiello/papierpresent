@@ -1,0 +1,1 @@
+await _GET_adjustments.trigger();
