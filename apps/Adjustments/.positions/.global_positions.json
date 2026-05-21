@@ -1,0 +1,14 @@
+{
+  "avatar1": {
+    "subcontainer": "sidebarFrame1",
+    "row": 0,
+    "height": 0.2,
+    "width": 1
+  },
+  "navigation1": {
+    "subcontainer": "sidebarFrame1",
+    "row": 1.6,
+    "height": 0.8,
+    "width": 1
+  }
+}
