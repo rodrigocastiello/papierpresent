@@ -1,0 +1,259 @@
+{
+  "container1": {
+    "row": 6,
+    "col": 2,
+    "height": 0.2,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container2": {
+    "container": "container1",
+    "subcontainer": "00030",
+    "height": 11.6,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 2,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container3": {
+    "container": "container2",
+    "subcontainer": "00030",
+    "row": 0.4,
+    "col": 8,
+    "height": 1,
+    "width": 4,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container4": {
+    "container": "container1",
+    "subcontainer": "00030",
+    "col": 6,
+    "height": 9.6,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container5": {
+    "container": "listView1",
+    "height": 1,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container6": {
+    "container": "container1",
+    "subcontainer": "00030",
+    "row": 9.6,
+    "col": 6,
+    "height": 0.2,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "container7": {
+    "subcontainer": "drawerFrame1",
+    "row": 4.2,
+    "col": 3,
+    "height": 1,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "containerTitle1": {
+    "container": "container1",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle2": {
+    "container": "container2",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle3": {
+    "container": "container4",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle4": {
+    "container": "container5",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle5": {
+    "container": "container6",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "containerTitle6": {
+    "container": "container7",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "drawerCloseButton1": {
+    "rowGroup": "header",
+    "subcontainer": "drawerFrame1",
+    "col": 9,
+    "height": 0.8
+  },
+  "drawerTitle1": {
+    "rowGroup": "header",
+    "subcontainer": "drawerFrame1",
+    "height": 0.6,
+    "width": 9
+  },
+  "listView1": {
+    "container": "container4",
+    "subcontainer": "00030",
+    "height": 8,
+    "width": 8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "select3": {
+    "container": "container3",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 0,
+    "col": 4,
+    "height": 0.2,
+    "width": 4
+  },
+  "select4": {
+    "container": "container3",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 0,
+    "col": 8,
+    "height": 0.2,
+    "width": 4,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "tabbedContainer1": {
+    "container": "container7",
+    "subcontainer": "00030",
+    "row": 4,
+    "col": 4,
+    "height": 0.2,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "table1": {
+    "container": "container3",
+    "subcontainer": "00030",
+    "height": 8,
+    "width": 8
+  },
+  "tabs1": {
+    "container": "tabbedContainer1",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 12
+  },
+  "text1": {
+    "container": "container2",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 0.6,
+    "height": 0.6,
+    "width": 12
+  },
+  "text2": {
+    "container": "container6",
+    "subcontainer": "00030",
+    "height": 0.6,
+    "width": 12,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "text3": {
+    "rowGroup": "header",
+    "subcontainer": "drawerFrame1",
+    "row": 0.8,
+    "height": 0.6,
+    "width": 12
+  },
+  "textInput1": {
+    "container": "container3",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "row": 0,
+    "height": 0.2,
+    "width": 4
+  }
+}
