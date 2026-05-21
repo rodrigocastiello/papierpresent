@@ -1,0 +1,43 @@
+{
+  "button1": {
+    "container": "container1",
+    "rowGroup": "header",
+    "subcontainer": "00030",
+    "col": 10,
+    "height": 0.8,
+    "width": 2
+  },
+  "container1": {
+    "row": 5.8,
+    "height": 1.2,
+    "width": 6,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "containerTitle1": {
+    "container": "container1",
+    "rowGroup": "header",
+    "height": 0.6,
+    "width": 9
+  },
+  "table1": {
+    "container": "container1",
+    "subcontainer": "00030",
+    "height": 8,
+    "width": 8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  }
+}
