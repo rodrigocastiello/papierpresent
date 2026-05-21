@@ -57,7 +57,7 @@
     "width": 5,
     "stackPosition": {
       "object": {
-        "ordinal": 0,
+        "ordinal": 2,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -170,12 +170,12 @@
   "container8": {
     "container": "tabbedContainer1",
     "subcontainer": "00030",
-    "row": 0.8,
+    "row": 1.4,
     "height": 0.2,
     "width": 12,
     "stackPosition": {
       "object": {
-        "ordinal": 5,
+        "ordinal": 7,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -238,6 +238,38 @@
     "height": 0.6,
     "width": 12
   },
+  "divider1": {
+    "container": "tabbedContainer1",
+    "subcontainer": "00030",
+    "row": 1.2,
+    "col": 4,
+    "height": 0.2,
+    "width": 8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 1,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "divider2": {
+    "container": "tabbedContainer1",
+    "subcontainer": "00030",
+    "row": 4.8,
+    "col": 4,
+    "height": 0.2,
+    "width": 8,
+    "stackPosition": {
+      "object": {
+        "ordinal": 0,
+        "widthType": "fixed",
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
   "drawerCloseButton1": {
     "rowGroup": "header",
     "subcontainer": "drawerFrame1",
@@ -285,7 +317,7 @@
     "width": 7,
     "stackPosition": {
       "object": {
-        "ordinal": 1,
+        "ordinal": 3,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -295,12 +327,12 @@
   "otherJobsList": {
     "container": "tabbedContainer1",
     "subcontainer": "00030",
-    "row": 1.6,
+    "row": 5,
     "height": 8,
     "width": 12,
     "stackPosition": {
       "object": {
-        "ordinal": 4,
+        "ordinal": 6,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -435,12 +467,12 @@
   "text13": {
     "container": "tabbedContainer1",
     "subcontainer": "00030",
-    "row": 1,
+    "row": 1.6,
     "height": 0.6,
-    "width": 12,
+    "width": 4,
     "stackPosition": {
       "object": {
-        "ordinal": 2,
+        "ordinal": 4,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -560,10 +592,10 @@
     "subcontainer": "00030",
     "row": 0.2,
     "height": 0.6,
-    "width": 12,
+    "width": 4,
     "stackPosition": {
       "object": {
-        "ordinal": 3,
+        "ordinal": 5,
         "widthType": "fixed",
         "width": 0,
         "height": 0
@@ -599,7 +631,7 @@
     "width": 12,
     "stackPosition": {
       "object": {
-        "ordinal": 6,
+        "ordinal": 8,
         "widthType": "fixed",
         "width": 0,
         "height": 0

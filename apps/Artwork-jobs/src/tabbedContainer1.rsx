@@ -48,6 +48,7 @@
       value="**Suggested Match**"
       verticalAlign="center"
     />
+    <Divider id="divider1" />
     <Include src="./container8.rsx" />
     <Text
       id="text13"
@@ -60,6 +61,7 @@
       value="**Other artwork-jobs**"
       verticalAlign="center"
     />
+    <Divider id="divider2" />
     <ListViewBeta
       id="otherJobsList"
       data="{{ get_artwork_job_candidates.value?.others }}"
