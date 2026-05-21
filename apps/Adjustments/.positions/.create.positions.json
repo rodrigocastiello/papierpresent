@@ -1,7 +1,6 @@
 {
   "alert1": {
     "container": "form1",
-    "row": 0,
     "height": 2.4,
     "width": 12
   },
