@@ -28,7 +28,7 @@
     />
     <TagsWidget2
       id="tags1"
-      _colorByIndex={[""]}
+      _colorByIndex={["{{ theme.highlight }}"]}
       _hiddenByIndex={[false]}
       _iconByIndex={["bold/interface-favorite-star"]}
       _ids={["c6ef0"]}

@@ -1,0 +1,12 @@
+<GlobalFunctions>
+  <RetoolStorageQuery
+    id="_GET_logo"
+    actionType="read"
+    fileId="64893029-7bf9-45df-858c-bdaa0789e788"
+    resourceDisplayName="retool_storage"
+    resourceName="retool_storage"
+    runWhenModelUpdates={false}
+    showFailureToaster={false}
+    showSuccessToaster={false}
+  />
+</GlobalFunctions>

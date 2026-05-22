@@ -10,10 +10,10 @@
     id="avatar1"
     fallback="{{ current_user.fullName }}"
     imageSize={32}
-    label="{{ current_user.fullName }}"
-    labelCaption="{{ current_user.email }}"
+    label="Papier Present"
+    labelCaption="Warehouse console"
     margin="4px 4px"
-    src="{{ current_user.profilePhotoUrl }}"
+    src="{{ _GET_logo.data.url }}"
     style={{ map: { background: "automatic" } }}
   />
   <Navigation
