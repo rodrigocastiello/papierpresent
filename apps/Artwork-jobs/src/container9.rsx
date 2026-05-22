@@ -23,7 +23,7 @@
     />
     <TagsWidget2
       id="tags2"
-      _colorByIndex={[""]}
+      _colorByIndex={["{{ theme.success }}"]}
       _hiddenByIndex={["{{ (item.sizes || []).length < 2 }}"]}
       _iconByIndex={[""]}
       _ids={["c6ef0"]}
