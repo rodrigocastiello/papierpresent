@@ -192,6 +192,7 @@
       emptyMessage="No rows found"
       enableExpandableRows={true}
       enableSaveActions={true}
+      primaryKeyColumnId="c24bd"
       rowHeight="medium"
       showBorder={true}
       showFooter={true}
@@ -202,6 +203,7 @@
       <Column
         id="c24bd"
         alignment="right"
+        editable={false}
         format="decimal"
         groupAggregationMode="countDistinct"
         hidden="true"
