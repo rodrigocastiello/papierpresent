@@ -41,11 +41,34 @@
   >
     <Option
       id="00030"
-      appTarget="a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c"
       icon="line/interface-setting-menu-1"
       iconPosition="left"
       itemType="app"
+      key="886bf"
+      label="Call-offs"
       screenTargetId="list"
+    />
+    <Option
+      id="1e94d"
+      appTarget="a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c"
+      disabled={false}
+      hidden={false}
+      iconPosition="left"
+      itemType="app"
+      label="List"
+      parentKey="886bf"
+      screenTargetId="list"
+    />
+    <Option
+      id="4b1c3"
+      appTarget="a7f4c8d4-52d0-11f1-8bc9-57003f5dec9c"
+      disabled={false}
+      hidden={false}
+      iconPosition="left"
+      itemType="app"
+      label="Create"
+      parentKey="886bf"
+      screenTargetId="create"
     />
     <Option
       id="00031"

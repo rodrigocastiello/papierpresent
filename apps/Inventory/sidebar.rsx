@@ -87,19 +87,21 @@
       />
       <Option
         id="00032"
+        appTarget="5b1f6d90-551c-11f1-957b-1330d0ebd223"
         icon={'{{  "/icon:line/interface-arrows-expand-3"  }}'}
         iconPosition="left"
-        itemType="page"
-        label="Adjustments"
+        itemType="app"
+        screenTargetId="list"
       />
       <Option
         id="e46f2"
+        appTarget="dcb19522-553a-11f1-91b4-5f0e5d89d19d"
         disabled={false}
         hidden={false}
         icon={'{{  "/icon:line/interface-file-text"  }}'}
         iconPosition="left"
         itemType="app"
-        label="Artwork jobs"
+        screenTargetId="link"
       />
       <Event
         id="mockEventHandlerId1"
