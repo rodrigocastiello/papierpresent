@@ -75,6 +75,7 @@
       icon="line/shipping-box-2"
       iconPosition="left"
       itemType="app"
+      screenTargetId="list"
     />
     <Option
       id="00032"
@@ -82,15 +83,17 @@
       icon="line/interface-arrows-expand-3"
       iconPosition="left"
       itemType="app"
+      screenTargetId="list"
     />
     <Option
       id="e7d08"
+      appTarget="dcb19522-553a-11f1-91b4-5f0e5d89d19d"
       disabled={false}
       hidden={false}
       icon="line/interface-file-text"
       iconPosition="left"
       itemType="app"
-      label="Artwork-jobs"
+      screenTargetId="link"
     />
     <Event
       id="mockEventHandlerId1"
