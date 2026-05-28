@@ -68,23 +68,40 @@
       showHeader={true}
     >
       <Header>
-        <Text
-          id="containerTitle1"
-          value="#### Adjustments"
-          verticalAlign="center"
-        />
-        <Button id="button1" text="New adjustment">
-          <Event
-            id="b6013de3"
-            event="click"
-            method="trigger"
-            params={{}}
-            pluginId="open_create_page"
-            type="datasource"
-            waitMs="0"
-            waitType="debounce"
-          />
-        </Button>
+        <Container
+          id="group1"
+          _align="center"
+          _gap="0px"
+          _type="stack"
+          footerPadding="4px 12px"
+          headerPadding="4px 12px"
+          margin="0"
+          padding="0"
+          showBody={true}
+          showBorder={false}
+          style={{ map: { background: "rgba(255, 255, 255, 0)" } }}
+        >
+          <View id="00030" viewKey="View 1">
+            <Text
+              id="containerTitle1"
+              style={{ map: { color: "primary" } }}
+              value="#### Adjustments"
+              verticalAlign="center"
+            />
+            <Button id="button1" text="New adjustment">
+              <Event
+                id="b6013de3"
+                event="click"
+                method="trigger"
+                params={{}}
+                pluginId="open_create_page"
+                type="datasource"
+                waitMs="0"
+                waitType="debounce"
+              />
+            </Button>
+          </View>
+        </Container>
       </Header>
       <View id="00030" viewKey="View 1">
         <Table
@@ -154,7 +171,7 @@
             label="On hand before"
             placeholder="Enter value"
             position="center"
-            size={104.140625}
+            size={136.140625}
             summaryAggregationMode="none"
           />
           <Column
@@ -194,7 +211,7 @@
             label="Reason detail"
             placeholder="Enter value"
             position="center"
-            size={92.453125}
+            size={114.453125}
             summaryAggregationMode="none"
           />
           <Column
