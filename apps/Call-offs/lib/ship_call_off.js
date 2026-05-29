@@ -33,8 +33,7 @@ await _UPDATE_call_off_state.trigger({
       title: `${co.code} shipped`,
       description: `${co.customer_name} · marked as shipped.`,
     });
-    await _GET_call_off_detail.trigger();
-    await _GET_call_offs.trigger(); // refresh list-screen cache too
+    await _init_detail.trigger();
   },
   onFailure: (err) => {
     console.error("[ship_call_off] update failed:", err);
