@@ -4,6 +4,9 @@ SELECT
   col.product_id,
   col.artwork_job_id,
   col.quantity_requested,
+  col.quantity_picked,      -- add
+  col.line_state,           -- add
+  col.picked_at,            -- add  
 
   p.code            AS product_code,
   p.display_name    AS product_name,

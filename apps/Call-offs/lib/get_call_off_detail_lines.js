@@ -16,12 +16,7 @@ return lines.map((r, i) => {
   const cartonSize = Number(r.units_per_carton) || 25;
 
   // Mocked picked qty
-  let picked = 0;
-  if (state === "picking") {
-    picked = i < total - 1 ? requested : Math.floor(requested * 0.5);
-  } else if (state === "shipped") {
-    picked = requested;
-  }
+  const picked = Number(r.quantity_picked) || 0;
 
   const fullCartons = Math.floor(picked / cartonSize);
   const remainderUnits = picked - fullCartons * cartonSize;
